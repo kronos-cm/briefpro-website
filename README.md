@@ -4,7 +4,7 @@ Static marketing website for BriefPro.
 
 ## Decisions (canonical)
 
-- Marketing: `https://briefpro.de` (GitHub Pages)
+- Website: `https://briefpro.de` (GitHub Pages)
 - App: `https://app.briefpro.de`
 - DNS authority: GCP Cloud DNS (Strato remains registrar)
 - Languages: DE default at `/`, EN at `/en/`
