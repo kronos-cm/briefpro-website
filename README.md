@@ -1,6 +1,6 @@
-# BriefPro Marketing Website
+# BriefPro Website
 
-Static marketing website for BriefPro.
+Static website for BriefPro.
 
 ## Decisions (canonical)
 
