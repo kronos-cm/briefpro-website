@@ -15,15 +15,25 @@
   <meta property="og:url" content="https://briefpro.de/" />
 </head>
 <body>
+  <script>
+    if (location.hostname === 'www.briefpro.de') {
+      location.replace('https://briefpro.de' + location.pathname + location.search + location.hash);
+    }
+  </script>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="BriefPro">
-        <span class="logo" aria-hidden="true"></span>
-        <span class="brand-name">BriefPro</span>
+        <picture class="logo" aria-hidden="true">
+          <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)" />
+          <img src="/assets/briefpro-logo-light.jpg" alt="" />
+        </picture>
         <span class="badge">DE · Arztbrief</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
         <a href="#produkt">Produkt</a>
+        <a href="#preise">Preise</a>
+        <a href="#ressourcen">Ressourcen</a>
+        <a href="#stories">Stories</a>
         <a href="#sicherheit">Sicherheit</a>
         <a href="#kontakt">Kontakt</a>
         <span class="lang" aria-label="Sprache">
@@ -102,7 +112,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 style="margin:0 0 14px; font-size:22px;">So läuft’s ab</h2>
+        <h2 class="section-title">So läuft’s ab</h2>
         <div class="flow">
           <div class="step">
             <div class="tag">1</div>
@@ -141,11 +151,64 @@
       </div>
     </section>
 
+    <section id="preise" class="section">
+      <div class="container">
+        <h2 class="section-title">Preise (Pilot)</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Einzelpraxis</h3>
+            <p>Pilot für 1–3 Behandler. Fokus: Workflow, Qualität, Export.</p>
+          </div>
+          <div class="card">
+            <h3>MVZ / Klinikbereich</h3>
+            <p>Pilot für Teams. Fokus: Rollen, Freigabe, Audit, Integration-Plan.</p>
+          </div>
+          <div class="card">
+            <h3>Enterprise</h3>
+            <p>Mehr Standorte, SSO, Datenhaltung, AVV/DPIA-Setup und Connector-Plan.</p>
+          </div>
+        </div>
+        <p class="note">Preise werden im Pilot individuell nach Setup und Anforderungen finalisiert.</p>
+      </div>
+    </section>
+
+    <section id="ressourcen" class="section">
+      <div class="container">
+        <h2 class="section-title">Ressourcen</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>One-Pager</h3>
+            <p>Kurzübersicht (kommt in Kürze).</p>
+          </div>
+          <div class="card">
+            <h3>Security Summary</h3>
+            <p>Zusammenfassung zu Datenschutz, Audit und Freigabeprozessen (kommt in Kürze).</p>
+          </div>
+          <div class="card">
+            <h3>Pilot Checklist</h3>
+            <p>Onboarding-Checkliste für Kliniken & Praxen (kommt in Kürze).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="section">
+      <div class="container">
+        <h2 class="section-title">Customer Stories</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Pilot Story (Platzhalter)</h3>
+            <p>Hier entsteht die erste Story aus dem Pilotbetrieb.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="kontakt" class="section">
       <div class="container">
         <div class="panel">
-          <h2 style="margin:0 0 8px; font-size:22px;">Pilot oder Demo</h2>
-          <p class="muted" style="margin:0 0 14px;">Schreib uns kurz, was du nutzt (Cobra / Kliniksystem) und ob du DE+EN brauchst.</p>
+          <h2 class="panel-title">Pilot oder Demo</h2>
+          <p class="muted panel-subtitle">Schreib uns kurz, was du nutzt (Cobra / Kliniksystem) und ob du DE+EN brauchst.</p>
           <div class="cta">
             <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">pilot@briefpro.de</a>
             <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Zur App</a>
@@ -157,7 +220,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
+    <div class="container footer-inner">
       <div class="muted">© <span id="y"></span> BriefPro</div>
       <div class="legal">
         <a href="/impressum.html">Impressum</a>

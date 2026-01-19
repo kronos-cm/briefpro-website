@@ -11,8 +11,10 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="BriefPro">
-        <span class="logo" aria-hidden="true"></span>
-        <span class="brand-name">BriefPro</span>
+        <picture class="logo" aria-hidden="true">
+          <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)" />
+          <img src="/assets/briefpro-logo-light.jpg" alt="" />
+        </picture>
         <span class="badge">Impressum</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
@@ -24,19 +26,19 @@
   <main class="section">
     <div class="container">
       <div class="panel">
-        <h1 style="margin:0 0 8px; font-size:22px;">Impressum</h1>
-        <p class="muted" style="margin:0 0 14px;">Platzhalter — bitte mit deinen Unternehmensdaten ersetzen.</p>
+        <h1 class="panel-title">Impressum</h1>
+        <p class="muted panel-subtitle">Platzhalter — bitte mit deinen Unternehmensdaten ersetzen.</p>
         <div class="muted">
-          <p style="margin:0 0 10px;"><strong>Anbieter</strong><br />
+          <p class="legal-p"><strong>Anbieter</strong><br />
           [Name / Firma]<br />
           [Adresse]<br />
           [E-Mail]<br />
           [Telefon]</p>
-          <p style="margin:0 0 10px;"><strong>Vertretungsberechtigt</strong><br />
+          <p class="legal-p"><strong>Vertretungsberechtigt</strong><br />
           [Geschäftsführer / Inhaber]</p>
-          <p style="margin:0 0 10px;"><strong>Register</strong><br />
+          <p class="legal-p"><strong>Register</strong><br />
           [Handelsregister / Registergericht / Registernummer]</p>
-          <p style="margin:0;"><strong>USt-ID</strong><br />
+          <p class="legal-p last"><strong>USt-ID</strong><br />
           [USt-IdNr.]</p>
         </div>
       </div>

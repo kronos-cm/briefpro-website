@@ -11,8 +11,10 @@
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="BriefPro">
-        <span class="logo" aria-hidden="true"></span>
-        <span class="brand-name">BriefPro</span>
+        <picture class="logo" aria-hidden="true">
+          <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)" />
+          <img src="/assets/briefpro-logo-light.jpg" alt="" />
+        </picture>
         <span class="badge">Datenschutz</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
@@ -24,16 +26,16 @@
   <main class="section">
     <div class="container">
       <div class="panel">
-        <h1 style="margin:0 0 8px; font-size:22px;">Datenschutzerklärung</h1>
-        <p class="muted" style="margin:0 0 14px;">Platzhalter — bitte mit einer finalen Datenschutzerklärung ersetzen (inkl. ggf. Analytics/Form-Provider).</p>
+        <h1 class="panel-title">Datenschutzerklärung</h1>
+        <p class="muted panel-subtitle">Platzhalter — bitte mit einer finalen Datenschutzerklärung ersetzen (inkl. ggf. Analytics/Form-Provider).</p>
         <div class="muted">
-          <p style="margin:0 0 10px;"><strong>Verantwortlicher</strong><br />
+          <p class="legal-p"><strong>Verantwortlicher</strong><br />
           [Name / Firma], [Adresse], [Kontakt]</p>
-          <p style="margin:0 0 10px;"><strong>Server-Logs</strong><br />
+          <p class="legal-p"><strong>Server-Logs</strong><br />
           Beim Aufruf dieser Website werden technisch notwendige Informationen verarbeitet (z.B. IP-Adresse, Zeitpunkt, User-Agent).</p>
-          <p style="margin:0 0 10px;"><strong>Kontakt</strong><br />
+          <p class="legal-p"><strong>Kontakt</strong><br />
           Wenn du uns per E-Mail kontaktierst, verarbeiten wir die von dir übermittelten Daten zur Bearbeitung deiner Anfrage.</p>
-          <p style="margin:0;"><strong>Cookies/Tracking</strong><br />
+          <p class="legal-p last"><strong>Cookies/Tracking</strong><br />
           Ziel: Cookie-less / minimal analytics. Details folgen nach finaler Auswahl.</p>
         </div>
       </div>

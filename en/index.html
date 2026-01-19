@@ -15,15 +15,25 @@
   <meta property="og:url" content="https://briefpro.de/en/" />
 </head>
 <body>
+  <script>
+    if (location.hostname === 'www.briefpro.de') {
+      location.replace('https://briefpro.de' + location.pathname + location.search + location.hash);
+    }
+  </script>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="/en/" aria-label="BriefPro">
-        <span class="logo" aria-hidden="true"></span>
-        <span class="brand-name">BriefPro</span>
+        <picture class="logo" aria-hidden="true">
+          <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)" />
+          <img src="/assets/briefpro-logo-light.jpg" alt="" />
+        </picture>
         <span class="badge">EN · Overview</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
         <a href="#product">Product</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#resources">Resources</a>
+        <a href="#stories">Stories</a>
         <a href="#safety">Safety</a>
         <a href="#contact">Contact</a>
         <span class="lang" aria-label="Language">
@@ -102,7 +112,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 style="margin:0 0 14px; font-size:22px;">How it works</h2>
+        <h2 class="section-title">How it works</h2>
         <div class="flow">
           <div class="step">
             <div class="tag">1</div>
@@ -141,11 +151,64 @@
       </div>
     </section>
 
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Pricing (pilot)</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Single practice</h3>
+            <p>Pilot for 1–3 clinicians. Focus: workflow, quality, export.</p>
+          </div>
+          <div class="card">
+            <h3>Clinic team</h3>
+            <p>Pilot for teams. Focus: roles, approvals, audit trail, integration plan.</p>
+          </div>
+          <div class="card">
+            <h3>Enterprise</h3>
+            <p>Multiple sites, SSO, data residency, DPA/DPIA setup and connector plan.</p>
+          </div>
+        </div>
+        <p class="note">Pilot pricing is finalized case-by-case based on requirements.</p>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <h2 class="section-title">Resources</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>One-pager</h3>
+            <p>Short overview (coming soon).</p>
+          </div>
+          <div class="card">
+            <h3>Security summary</h3>
+            <p>Privacy, auditability and approval workflow summary (coming soon).</p>
+          </div>
+          <div class="card">
+            <h3>Pilot checklist</h3>
+            <p>Onboarding checklist for clinics and practices (coming soon).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="section">
+      <div class="container">
+        <h2 class="section-title">Customer stories</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Pilot story (placeholder)</h3>
+            <p>This is where the first pilot story will live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section">
       <div class="container">
         <div class="panel">
-          <h2 style="margin:0 0 8px; font-size:22px;">Pilot or demo</h2>
-          <p class="muted" style="margin:0 0 14px;">Tell us your setup (Cobra / hospital system) and your output requirements.</p>
+          <h2 class="panel-title">Pilot or demo</h2>
+          <p class="muted panel-subtitle">Tell us your setup (Cobra / hospital system) and your output requirements.</p>
           <div class="cta">
             <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">pilot@briefpro.de</a>
             <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Open app</a>
@@ -157,7 +220,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
+    <div class="container footer-inner">
       <div class="muted">© <span id="y"></span> BriefPro</div>
       <div class="legal">
         <a href="/impressum.html">Imprint</a>
