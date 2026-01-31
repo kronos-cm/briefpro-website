@@ -269,6 +269,7 @@
             <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
             <a class="btn secondary" data-cta="secondary" href="https://app.briefpro.de" rel="noopener">Zur App</a>
           </div>
+          <p class="note">Oder Termin buchen: <a class="text-link" data-cta="booking" href="https://cal.com/briefpro/pilot" rel="noopener">cal.com/briefpro/pilot</a></p>
           <p class="note">Impressum & Datenschutz werden im Repo ergänzt, sobald Firmendaten final sind.</p>
         </div>
       </div>
@@ -298,6 +299,9 @@
     });
     document.querySelectorAll('[data-cta="secondary"]').forEach((el) => {
       el.addEventListener('click', () => track('CTA_Secondary'));
+    });
+    document.querySelectorAll('[data-cta="booking"]').forEach((el) => {
+      el.addEventListener('click', () => track('CTA_Booking'));
     });
   </script>
 </body>
