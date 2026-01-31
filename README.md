@@ -17,6 +17,14 @@ These decisions are documented canonically in the app repo:
 
 Open `index.html` directly in a browser.
 
+## Tests
+
+Marketing tests validate SEO + CTA + proof assets:
+
+```bash
+python3 -m unittest -v tests/test_marketing_site.py
+```
+
 ## Deploy
 
 Deployment uses GitHub Pages via Actions.

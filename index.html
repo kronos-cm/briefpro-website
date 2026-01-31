@@ -5,14 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BriefPro — Arztbrief in Minuten. Voice-first. Sicher.</title>
   <meta name="description" content="BriefPro ist ein voice-first Assistent für deutsche Arztbriefe: Aufnahme → Transkript → strukturierter Entwurf → Review & Freigabe → Export." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://briefpro.de/" />
   <link rel="alternate" href="https://briefpro.de/" hreflang="de" />
   <link rel="alternate" href="https://briefpro.de/en/" hreflang="en" />
+  <link rel="alternate" href="https://briefpro.de/" hreflang="x-default" />
   <link rel="stylesheet" href="/styles.css" />
   <meta property="og:title" content="BriefPro — Arztbrief in Minuten" />
   <meta property="og:description" content="Voice-first. Review-first. Für Deutschland." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://briefpro.de/" />
+  <meta property="og:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BriefPro — Arztbrief in Minuten" />
+  <meta name="twitter:description" content="Voice-first. Review-first. Für Deutschland." />
+  <meta name="twitter:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+  <script defer data-domain="briefpro.de" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BriefPro",
+      "url": "https://briefpro.de",
+      "logo": "https://briefpro.de/assets/briefpro-logo-light.jpg",
+      "sameAs": ["https://app.briefpro.de"]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BriefPro",
+      "url": "https://briefpro.de",
+      "inLanguage": "de-DE"
+    }
+  </script>
 </head>
 <body>
   <script>
@@ -57,8 +84,8 @@
             <br />Weniger tippen. Mehr behandeln.</h1>
           <p class="sub">BriefPro erstellt strukturierte deutsche Arztbriefe aus dem Gespräch: Aufnahme → Transkript → 12-Sektionen-Entwurf → explizite Freigabe → Export. Ohne Autopilot.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
-            <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Zur App <small>(app.briefpro.de)</small></a>
+            <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
+            <a class="btn secondary" data-cta="secondary" href="https://app.briefpro.de" rel="noopener">Zur App <small>(app.briefpro.de)</small></a>
           </div>
           <p class="note">Standard: keine langfristige Audio-Speicherung. Transkript + Audit-Log als Nachvollziehbarkeit.</p>
         </div>
@@ -85,7 +112,7 @@
           <hr />
           <div class="muted">Du willst nur sehen, ob es funktioniert?</div>
           <div class="cta">
-            <a class="btn secondary" href="#kontakt">Demo anfragen</a>
+            <a class="btn secondary" data-cta="secondary" href="#kontakt">Demo anfragen</a>
           </div>
         </aside>
       </div>
@@ -138,6 +165,32 @@
       </div>
     </section>
 
+    <section id="proof" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Produkt in Aktion</h2>
+          <p class="sub">Echte Screens aus dem Workflow: Transkript, Entwurf und Review. Fokus auf Geschwindigkeit und Freigabe.</p>
+        </div>
+        <div class="proof-grid">
+          <figure class="proof-card">
+            <img src="/assets/proof-letter-chat-light.png" alt="BriefPro Chat mit Entwurf und Freigabe" loading="lazy" />
+            <figcaption>12‑Sektionen Entwurf mit Review‑Status</figcaption>
+          </figure>
+          <figure class="proof-card">
+            <img src="/assets/proof-letter-chat-dark.png" alt="BriefPro Arztbrief-Workflow im Dunkelmodus" loading="lazy" />
+            <figcaption>Arztbrief-Workflow (Dark Mode)</figcaption>
+          </figure>
+          <figure class="proof-card">
+            <img src="/assets/proof-session-manager.png" alt="BriefPro Patienten- und Sitzungsübersicht" loading="lazy" />
+            <figcaption>Patienten- & Sitzungsmanagement</figcaption>
+          </figure>
+        </div>
+        <div class="cta center">
+          <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
+        </div>
+      </div>
+    </section>
+
     <section id="sicherheit" class="section">
       <div class="container split">
         <div class="card">
@@ -178,16 +231,19 @@
         <div class="grid3">
           <div class="card">
             <h3>One-Pager</h3>
-            <p>Kurzübersicht (kommt in Kürze).</p>
+            <p>Kurzübersicht für Einkauf & IT – auf Anfrage per E‑Mail.</p>
           </div>
           <div class="card">
             <h3>Security Summary</h3>
-            <p>Zusammenfassung zu Datenschutz, Audit und Freigabeprozessen (kommt in Kürze).</p>
+            <p>Datenschutz, Audit und Freigabeprozesse – auf Anfrage.</p>
           </div>
           <div class="card">
             <h3>Pilot Checklist</h3>
-            <p>Onboarding-Checkliste für Kliniken & Praxen (kommt in Kürze).</p>
+            <p>Onboarding-Checkliste für Kliniken & Praxen – auf Anfrage.</p>
           </div>
+        </div>
+        <div class="cta center">
+          <a class="btn secondary" data-cta="secondary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Ressourcen%20anfragen">Ressourcen anfragen</a>
         </div>
       </div>
     </section>
@@ -197,8 +253,8 @@
         <h2 class="section-title">Customer Stories</h2>
         <div class="grid3">
           <div class="card">
-            <h3>Pilot Story (Platzhalter)</h3>
-            <p>Hier entsteht die erste Story aus dem Pilotbetrieb.</p>
+            <h3>Pilot-Report (anonymisiert)</h3>
+            <p>Struktur, Review-Zeit, Export-Qualität – zusammengefasst nach den ersten Piloten.</p>
           </div>
         </div>
       </div>
@@ -210,8 +266,8 @@
           <h2 class="panel-title">Pilot oder Demo</h2>
           <p class="muted panel-subtitle">Schreib uns kurz, was du nutzt (Cobra / Kliniksystem) und ob du DE+EN brauchst.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">pilot@briefpro.de</a>
-            <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Zur App</a>
+            <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
+            <a class="btn secondary" data-cta="secondary" href="https://app.briefpro.de" rel="noopener">Zur App</a>
           </div>
           <p class="note">Impressum & Datenschutz werden im Repo ergänzt, sobald Firmendaten final sind.</p>
         </div>
@@ -232,6 +288,17 @@
 
   <script>
     document.getElementById('y').textContent = String(new Date().getFullYear());
+    const track = (eventName) => {
+      if (typeof window.plausible === 'function') {
+        window.plausible(eventName);
+      }
+    };
+    document.querySelectorAll('[data-cta="primary"]').forEach((el) => {
+      el.addEventListener('click', () => track('CTA_Pilot'));
+    });
+    document.querySelectorAll('[data-cta="secondary"]').forEach((el) => {
+      el.addEventListener('click', () => track('CTA_Secondary'));
+    });
   </script>
 </body>
 </html>

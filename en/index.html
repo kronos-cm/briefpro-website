@@ -5,14 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BriefPro — Medical letters in minutes. Voice-first. Safe.</title>
   <meta name="description" content="BriefPro is a voice-first assistant for German medical letters: record → transcript → structured draft → review & approval → export." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://briefpro.de/en/" />
   <link rel="alternate" href="https://briefpro.de/" hreflang="de" />
   <link rel="alternate" href="https://briefpro.de/en/" hreflang="en" />
+  <link rel="alternate" href="https://briefpro.de/" hreflang="x-default" />
   <link rel="stylesheet" href="/styles.css" />
   <meta property="og:title" content="BriefPro — Medical letters in minutes" />
   <meta property="og:description" content="Voice-first. Review-first. Built for Germany." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://briefpro.de/en/" />
+  <meta property="og:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BriefPro — Medical letters in minutes" />
+  <meta name="twitter:description" content="Voice-first. Review-first. Built for Germany." />
+  <meta name="twitter:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+  <script defer data-domain="briefpro.de" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BriefPro",
+      "url": "https://briefpro.de",
+      "logo": "https://briefpro.de/assets/briefpro-logo-light.jpg",
+      "sameAs": ["https://app.briefpro.de"]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BriefPro",
+      "url": "https://briefpro.de",
+      "inLanguage": "en-US"
+    }
+  </script>
 </head>
 <body>
   <script>
@@ -57,8 +84,8 @@
             <br />Less typing. More care.</h1>
           <p class="sub">BriefPro turns consultation audio into a structured German medical letter draft: record → transcript → 12-section draft → explicit approval → export. No autopilot.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
-            <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Open app <small>(app.briefpro.de)</small></a>
+            <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
+            <a class="btn secondary" data-cta="secondary" href="https://app.briefpro.de" rel="noopener">Open app <small>(app.briefpro.de)</small></a>
           </div>
           <p class="note">Default: no long-term audio retention. We keep transcript + approvals for traceability.</p>
         </div>
@@ -85,7 +112,7 @@
           <hr />
           <div class="muted">Want a quick demo?</div>
           <div class="cta">
-            <a class="btn secondary" href="#contact">Request a demo</a>
+            <a class="btn secondary" data-cta="secondary" href="#contact">Request a demo</a>
           </div>
         </aside>
       </div>
@@ -138,6 +165,32 @@
       </div>
     </section>
 
+    <section id="proof" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Product in action</h2>
+          <p class="sub">Real workflow screens: transcript, draft and approval flow in the live app.</p>
+        </div>
+        <div class="proof-grid">
+          <figure class="proof-card">
+            <img src="/assets/proof-letter-chat-light.png" alt="BriefPro chat with draft and approval" loading="lazy" />
+            <figcaption>12‑section draft with approval status</figcaption>
+          </figure>
+          <figure class="proof-card">
+            <img src="/assets/proof-letter-chat-dark.png" alt="BriefPro letter workflow in dark mode" loading="lazy" />
+            <figcaption>Letter workflow (dark mode)</figcaption>
+          </figure>
+          <figure class="proof-card">
+            <img src="/assets/proof-session-manager.png" alt="BriefPro patient and session overview" loading="lazy" />
+            <figcaption>Patient and session overview</figcaption>
+          </figure>
+        </div>
+        <div class="cta center">
+          <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
+        </div>
+      </div>
+    </section>
+
     <section id="safety" class="section">
       <div class="container split">
         <div class="card">
@@ -178,16 +231,19 @@
         <div class="grid3">
           <div class="card">
             <h3>One-pager</h3>
-            <p>Short overview (coming soon).</p>
+            <p>Short overview for procurement + IT, on request.</p>
           </div>
           <div class="card">
             <h3>Security summary</h3>
-            <p>Privacy, auditability and approval workflow summary (coming soon).</p>
+            <p>Privacy, auditability and approval workflow summary, on request.</p>
           </div>
           <div class="card">
             <h3>Pilot checklist</h3>
-            <p>Onboarding checklist for clinics and practices (coming soon).</p>
+            <p>Onboarding checklist for clinics and practices, on request.</p>
           </div>
+        </div>
+        <div class="cta center">
+          <a class="btn secondary" data-cta="secondary" href="mailto:pilot@briefpro.de?subject=BriefPro%20resources%20request">Request resources</a>
         </div>
       </div>
     </section>
@@ -197,8 +253,8 @@
         <h2 class="section-title">Customer stories</h2>
         <div class="grid3">
           <div class="card">
-            <h3>Pilot story (placeholder)</h3>
-            <p>This is where the first pilot story will live.</p>
+            <h3>Pilot report (anonymized)</h3>
+            <p>Turnaround time, review effort, export quality — summarized after early pilots.</p>
           </div>
         </div>
       </div>
@@ -210,8 +266,8 @@
           <h2 class="panel-title">Pilot or demo</h2>
           <p class="muted panel-subtitle">Tell us your setup (Cobra / hospital system) and your output requirements.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">pilot@briefpro.de</a>
-            <a class="btn secondary" href="https://app.briefpro.de" rel="noopener">Open app</a>
+            <a class="btn primary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
+            <a class="btn secondary" data-cta="secondary" href="https://app.briefpro.de" rel="noopener">Open app</a>
           </div>
           <p class="note">Imprint & privacy pages will be finalized once legal/company details are confirmed.</p>
         </div>
@@ -232,6 +288,17 @@
 
   <script>
     document.getElementById('y').textContent = String(new Date().getFullYear());
+    const track = (eventName) => {
+      if (typeof window.plausible === 'function') {
+        window.plausible(eventName);
+      }
+    };
+    document.querySelectorAll('[data-cta="primary"]').forEach((el) => {
+      el.addEventListener('click', () => track('CTA_Pilot'));
+    });
+    document.querySelectorAll('[data-cta="secondary"]').forEach((el) => {
+      el.addEventListener('click', () => track('CTA_Secondary'));
+    });
   </script>
 </body>
 </html>
