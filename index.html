@@ -60,8 +60,8 @@
         <span class="badge">DE · Arztbrief</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
+        <a href="#gruendungsstory">Gründungsstory</a>
         <a href="#produkt">Produkt</a>
-        <a href="#unternehmen">Unternehmen</a>
         <a href="#team">Team</a>
         <a href="#preise">Preise</a>
         <a href="#ressourcen">Ressourcen</a>
@@ -196,18 +196,37 @@
       </div>
     </section>
 
-    <section id="unternehmen" class="section">
+    <section id="gruendungsstory" class="section">
       <div class="container">
-        <h2 class="section-title">Warum BriefPro gegründet wurde</h2>
+        <h2 class="section-title">Die Gründungsstory</h2>
         <div class="card story-card">
           <p>
-            BriefPro wurde gegründet, nachdem ich im direkten Umfeld gesehen habe, wie stark Ärztinnen und Ärzte unter der Dokumentationslast leiden:
-            Nach 16–24 Stunden Dienst folgen oft weitere 3–5 Stunden für Arztbriefe und Nachdokumentation.
+            BriefPro ist aus einer sehr menschlichen Beobachtung entstanden: In meinem Umfeld haben Ärztinnen und Ärzte nach 16–24 Stunden Schicht
+            oft noch 3–5 zusätzliche Stunden Dokumentation gemacht. Nicht, weil sie unorganisiert waren, sondern weil das System es von ihnen verlangt.
+            Nachtdienst, Visiten, Notfälle – und dann beginnt erst die Büroarbeit.
           </p>
           <p>
-            Unsere Mission ist klar: medizinische Dokumentation in Deutschland spürbar zu beschleunigen, ohne klinische Qualität, Review-Pflicht oder
-            Nachvollziehbarkeit aufzugeben. BriefPro ist deshalb voice-first, review-first und auditierbar gebaut.
+            Ich wollte dieses Muster nicht mehr akzeptieren. Die Idee hinter BriefPro war deshalb nie „mehr AI“, sondern mehr Zeit für Medizin.
+            Ein Werkzeug, das im Alltag funktioniert: Gespräch aufnehmen, strukturieren, prüfen, freigeben – mit klarer Verantwortung und ohne stille Autopilot-Änderungen.
           </p>
+          <p>
+            Unsere Mission in einem Satz: Wir wollen Ärztinnen und Ärzten in Deutschland ihre Zeit zurückgeben, ohne Qualität, Review-Pflicht oder
+            Nachvollziehbarkeit zu opfern.
+          </p>
+        </div>
+        <div class="grid3 roadmap-grid">
+          <div class="card">
+            <h3>Bereits live</h3>
+            <p>Voice-zu-Transkript, strukturierter 12‑Sektionen‑Entwurf, Review/Freigabe und Export in einem klinisch nutzbaren Ablauf.</p>
+          </div>
+          <div class="card">
+            <h3>Nächster Fokus</h3>
+            <p>Mehr Team-Workflows, bessere Freigabe-Stufen und engere Integration in bestehende Praxis- und Klinikprozesse.</p>
+          </div>
+          <div class="card">
+            <h3>Roadmap Sicherheit</h3>
+            <p>Klare Compliance-Roadmap für Deutschland und EU – inklusive ausbaubarem Sicherheits- und Governance-Rahmen.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -219,9 +238,10 @@
           <article class="card team-card">
             <img
               class="team-photo"
-              src="/assets/team-angel-castro-martinez.svg"
+              src="/assets/team-angel-castro-martinez.jpg"
               alt="Angel Castro Martinez"
               loading="lazy"
+              onerror="this.onerror=null;this.src='/assets/team-angel-castro-martinez.svg';"
             />
             <div>
               <h3>Angel Mario Castro Martinez</h3>
@@ -229,6 +249,7 @@
               <p class="muted">
                 Produkt, Engineering und Rollout von BriefPro mit Fokus auf klinische Entlastung und belastbare Workflows.
               </p>
+              <p class="muted">„Wenn wir die Doku-Zeit halbieren, entsteht wieder Raum für echte Patientenversorgung.“</p>
               <p>
                 <a
                   class="text-link"
@@ -252,6 +273,12 @@
         <div class="card">
           <h3>Integration Path</h3>
           <p>Erst Export, dann Connector: Cobra CRM zuerst. Kliniken/Häuser typischerweise über HL7 v2 / FHIR via Interface Engine.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <h3>Trust & Roadmap</h3>
+          <p>BriefPro arbeitet mit verpflichtendem Review, Approval-Gates und Audit-Log. Zertifizierungs- und Compliance-Themen (z. B. ISO/BSI) behandeln wir transparent als klare Roadmap, nicht als leere Versprechen.</p>
         </div>
       </div>
     </section>
@@ -312,6 +339,26 @@
       </div>
     </section>
 
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Ersetzt BriefPro ärztliche Entscheidungen?</h3>
+            <p>Nein. BriefPro unterstützt die Dokumentation, aber medizinische Verantwortung und Freigabe bleiben immer beim klinischen Team.</p>
+          </div>
+          <div class="card">
+            <h3>Wie schnell ist ein Pilot startbar?</h3>
+            <p>Typisch innerhalb weniger Tage, abhängig von Setup und Integrationsbedarf. Der Start funktioniert auch ohne tiefe Schnittstellenintegration.</p>
+          </div>
+          <div class="card">
+            <h3>Für wen ist BriefPro gemacht?</h3>
+            <p>Für Praxen, MVZ und Klinikteams, die hohe Dokumentationslast haben und einen belastbaren, nachvollziehbaren Workflow brauchen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="kontakt" class="section">
       <div class="container">
         <div class="panel">
@@ -331,6 +378,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="muted">© <span id="y"></span> BriefPro</div>
+      <a class="btn primary footer-cta" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
       <div class="legal">
         <a href="/impressum.html">Impressum</a>
         <a href="/privacy.html">Datenschutz</a>

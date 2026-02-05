@@ -60,8 +60,8 @@
         <span class="badge">EN · Overview</span>
       </a>
       <nav class="nav-links" aria-label="Navigation">
+        <a href="#founder-story">Story</a>
         <a href="#product">Product</a>
-        <a href="#company">Company</a>
         <a href="#team">Team</a>
         <a href="#pricing">Pricing</a>
         <a href="#resources">Resources</a>
@@ -196,18 +196,38 @@
       </div>
     </section>
 
-    <section id="company" class="section">
+    <section id="founder-story" class="section">
       <div class="container">
-        <h2 class="section-title">Why BriefPro was founded</h2>
+        <h2 class="section-title">Founder Story</h2>
         <div class="card story-card">
           <p>
-            BriefPro started after seeing close doctor friends repeatedly hit burnout from documentation overload:
-            after 16–24 hour shifts, they still needed 3–5 more hours to complete medical letters.
+            BriefPro started from a very human pattern I kept seeing around me: doctor friends finishing 16–24 hour shifts,
+            then spending another 3–5 hours writing documentation. Not because they lacked discipline, but because the workload
+            left no better option.
           </p>
           <p>
-            Our mission is practical: reduce documentation time for clinicians in Germany without sacrificing clinical quality,
-            explicit review, or auditability. That is why BriefPro is built as voice-first, review-first and traceable by design.
+            I did not want to build “just another AI tool.” I wanted to build time back into clinical life.
+            BriefPro is designed for daily reality: record, structure, review, approve and export — with explicit responsibility
+            and no silent autopilot changes.
           </p>
+          <p>
+            Our mission is straightforward: help clinicians in Germany reclaim time for patients without sacrificing quality,
+            review discipline, or traceability.
+          </p>
+        </div>
+        <div class="grid3 roadmap-grid">
+          <div class="card">
+            <h3>Already live</h3>
+            <p>Voice-to-transcript, structured 12-section draft, explicit review/approval, and export in one practical workflow.</p>
+          </div>
+          <div class="card">
+            <h3>Next focus</h3>
+            <p>Stronger team workflows, richer approval stages, and tighter integration into existing clinic and practice operations.</p>
+          </div>
+          <div class="card">
+            <h3>Trust roadmap</h3>
+            <p>Transparent compliance path for Germany and the EU, including an expandable security and governance framework.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -219,9 +239,10 @@
           <article class="card team-card">
             <img
               class="team-photo"
-              src="/assets/team-angel-castro-martinez.svg"
+              src="/assets/team-angel-castro-martinez.jpg"
               alt="Angel Castro Martinez"
               loading="lazy"
+              onerror="this.onerror=null;this.src='/assets/team-angel-castro-martinez.svg';"
             />
             <div>
               <h3>Angel Mario Castro Martinez</h3>
@@ -229,6 +250,7 @@
               <p class="muted">
                 Leads product and engineering for BriefPro, focused on clinically reliable workflows that reduce physician admin load.
               </p>
+              <p class="muted">“If we can cut documentation time in half, clinicians can finally get meaningful time back for patient care.”</p>
               <p>
                 <a
                   class="text-link"
@@ -252,6 +274,12 @@
         <div class="card">
           <h3>Integration path</h3>
           <p>Export first, connector later: Cobra CRM first. Hospitals typically integrate via HL7 v2 / FHIR through an interface engine.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <h3>Trust & roadmap</h3>
+          <p>BriefPro runs with mandatory review, approval gates, and an auditable trail. Certification and compliance topics (e.g. ISO/BSI) are handled as a transparent roadmap, not marketing claims.</p>
         </div>
       </div>
     </section>
@@ -312,6 +340,26 @@
       </div>
     </section>
 
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Does BriefPro replace clinical decisions?</h3>
+            <p>No. BriefPro supports documentation. Clinical responsibility and final approval always stay with the care team.</p>
+          </div>
+          <div class="card">
+            <h3>How quickly can a pilot start?</h3>
+            <p>Usually within days, depending on setup and integration scope. We can start without deep system integration.</p>
+          </div>
+          <div class="card">
+            <h3>Who is BriefPro for?</h3>
+            <p>Practices, clinic teams and care organizations with heavy documentation burden and high quality requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="section">
       <div class="container">
         <div class="panel">
@@ -331,6 +379,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="muted">© <span id="y"></span> BriefPro</div>
+      <a class="btn primary footer-cta" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
       <div class="legal">
         <a href="/impressum.html">Imprint</a>
         <a href="/privacy.html">Privacy</a>

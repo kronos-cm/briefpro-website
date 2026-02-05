@@ -97,8 +97,9 @@ class MarketingSiteTests(unittest.TestCase):
     def test_de_company_and_team_sections(self):
         _, body = self._load(BASE_DIR / "index.html")
         section_ids = {section.get("id") for section in body.sections}
-        self.assertIn("unternehmen", section_ids)
+        self.assertIn("gruendungsstory", section_ids)
         self.assertIn("team", section_ids)
+        self.assertIn("faq", section_ids)
 
         linkedin_links = [anchor.get("href", "") for anchor in body.anchors if "linkedin.com/in/" in anchor.get("href", "")]
         self.assertTrue(any("angelcastrom" in href for href in linkedin_links))
@@ -109,8 +110,9 @@ class MarketingSiteTests(unittest.TestCase):
     def test_en_company_and_team_sections(self):
         _, body = self._load(BASE_DIR / "en" / "index.html")
         section_ids = {section.get("id") for section in body.sections}
-        self.assertIn("company", section_ids)
+        self.assertIn("founder-story", section_ids)
         self.assertIn("team", section_ids)
+        self.assertIn("faq", section_ids)
 
         linkedin_links = [anchor.get("href", "") for anchor in body.anchors if "linkedin.com/in/" in anchor.get("href", "")]
         self.assertTrue(any("angelcastrom" in href for href in linkedin_links))
