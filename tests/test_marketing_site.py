@@ -94,6 +94,27 @@ class MarketingSiteTests(unittest.TestCase):
         analytics_scripts = [s for s in head.scripts if s.get("data-domain") == "briefpro.de"]
         self.assertTrue(analytics_scripts, "Expected privacy-friendly analytics script with data-domain")
 
+    def test_de_company_and_team_sections(self):
+        _, body = self._load(BASE_DIR / "index.html")
+        section_ids = {section.get("id") for section in body.sections}
+        self.assertIn("unternehmen", section_ids)
+        self.assertIn("team", section_ids)
+
+        linkedin_links = [anchor.get("href", "") for anchor in body.anchors if "linkedin.com/in/" in anchor.get("href", "")]
+        self.assertTrue(any("angelcastrom" in href for href in linkedin_links))
+
+        team_images = [image.get("src", "") for image in body.images if "team-" in image.get("src", "")]
+        self.assertGreaterEqual(len(team_images), 1)
+
+    def test_en_company_and_team_sections(self):
+        _, body = self._load(BASE_DIR / "en" / "index.html")
+        section_ids = {section.get("id") for section in body.sections}
+        self.assertIn("company", section_ids)
+        self.assertIn("team", section_ids)
+
+        linkedin_links = [anchor.get("href", "") for anchor in body.anchors if "linkedin.com/in/" in anchor.get("href", "")]
+        self.assertTrue(any("angelcastrom" in href for href in linkedin_links))
+
 
 if __name__ == "__main__":
     unittest.main()

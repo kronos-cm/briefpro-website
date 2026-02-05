@@ -1,0 +1,18 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Angel Castro Martinez">
+  <defs>
+    <linearGradient id="bg" x1="36" y1="28" x2="284" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="55" y1="55" x2="265" y2="265" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#BAE6FD" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="16" y="16" width="288" height="288" rx="40" fill="url(#bg)"/>
+  <circle cx="160" cy="160" r="92" fill="#0F172A" fill-opacity="0.23"/>
+  <circle cx="160" cy="160" r="102" stroke="url(#ring)" stroke-width="5"/>
+
+  <text x="160" y="179" text-anchor="middle" fill="#E0F2FE" font-size="78" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="3">AC</text>
+</svg>
