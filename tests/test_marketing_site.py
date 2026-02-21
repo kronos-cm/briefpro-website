@@ -98,6 +98,8 @@ class MarketingSiteTests(unittest.TestCase):
         _, body = self._load(BASE_DIR / "index.html")
         section_ids = {section.get("id") for section in body.sections}
         self.assertIn("gruendungsstory", section_ids)
+        self.assertIn("warum-briefpro", section_ids)
+        self.assertIn("freigabe-lanes", section_ids)
         self.assertIn("team", section_ids)
         self.assertIn("faq", section_ids)
 
@@ -111,11 +113,21 @@ class MarketingSiteTests(unittest.TestCase):
         _, body = self._load(BASE_DIR / "en" / "index.html")
         section_ids = {section.get("id") for section in body.sections}
         self.assertIn("founder-story", section_ids)
+        self.assertIn("why-briefpro", section_ids)
+        self.assertIn("approval-lanes", section_ids)
         self.assertIn("team", section_ids)
         self.assertIn("faq", section_ids)
 
         linkedin_links = [anchor.get("href", "") for anchor in body.anchors if "linkedin.com/in/" in anchor.get("href", "")]
         self.assertTrue(any("angelcastrom" in href for href in linkedin_links))
+
+    def test_booking_cta_present_on_de_and_en(self):
+        _, de_body = self._load(BASE_DIR / "index.html")
+        _, en_body = self._load(BASE_DIR / "en" / "index.html")
+        de_booking = [a for a in de_body.anchors if "calendar.app.google/M5LMF2EJpVn5vUGYA" in (a.get("href") or "")]
+        en_booking = [a for a in en_body.anchors if "calendar.app.google/M5LMF2EJpVn5vUGYA" in (a.get("href") or "")]
+        self.assertTrue(de_booking)
+        self.assertTrue(en_booking)
 
 
 if __name__ == "__main__":
