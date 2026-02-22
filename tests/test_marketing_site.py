@@ -28,9 +28,12 @@ class BodyCollector(HTMLParser):
         self.anchors = []
         self.images = []
         self.sections = []
+        self.ids = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if attrs.get("id"):
+            self.ids.add(attrs["id"])
         if tag == "a":
             self.anchors.append(attrs)
         elif tag == "img":
@@ -96,11 +99,12 @@ class MarketingSiteTests(unittest.TestCase):
 
     def test_de_company_and_team_sections(self):
         _, body = self._load(BASE_DIR / "index.html")
-        section_ids = {section.get("id") for section in body.sections}
+        section_ids = body.ids
         self.assertIn("gruendungsstory", section_ids)
         self.assertIn("walkthrough", section_ids)
         self.assertIn("warum-briefpro", section_ids)
         self.assertIn("freigabe-lanes", section_ids)
+        self.assertIn("compliance-roadmap", section_ids)
         self.assertIn("team", section_ids)
         self.assertIn("faq", section_ids)
 
@@ -112,11 +116,12 @@ class MarketingSiteTests(unittest.TestCase):
 
     def test_en_company_and_team_sections(self):
         _, body = self._load(BASE_DIR / "en" / "index.html")
-        section_ids = {section.get("id") for section in body.sections}
+        section_ids = body.ids
         self.assertIn("founder-story", section_ids)
         self.assertIn("walkthrough", section_ids)
         self.assertIn("why-briefpro", section_ids)
         self.assertIn("approval-lanes", section_ids)
+        self.assertIn("compliance-roadmap", section_ids)
         self.assertIn("team", section_ids)
         self.assertIn("faq", section_ids)
 
