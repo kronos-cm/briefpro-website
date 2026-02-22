@@ -98,6 +98,7 @@ class MarketingSiteTests(unittest.TestCase):
         _, body = self._load(BASE_DIR / "index.html")
         section_ids = {section.get("id") for section in body.sections}
         self.assertIn("gruendungsstory", section_ids)
+        self.assertIn("walkthrough", section_ids)
         self.assertIn("warum-briefpro", section_ids)
         self.assertIn("freigabe-lanes", section_ids)
         self.assertIn("team", section_ids)
@@ -113,6 +114,7 @@ class MarketingSiteTests(unittest.TestCase):
         _, body = self._load(BASE_DIR / "en" / "index.html")
         section_ids = {section.get("id") for section in body.sections}
         self.assertIn("founder-story", section_ids)
+        self.assertIn("walkthrough", section_ids)
         self.assertIn("why-briefpro", section_ids)
         self.assertIn("approval-lanes", section_ids)
         self.assertIn("team", section_ids)
