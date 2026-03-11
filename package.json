@@ -1,0 +1,14 @@
+{
+  "name": "briefpro-website",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "site:build": "node tools/site-tool.mjs build",
+    "site:validate": "node tools/site-tool.mjs validate --dir _site",
+    "site:preview": "node tools/site-tool.mjs serve --dir _site --port 4173",
+    "site:approve": "node tools/site-tool.mjs approve",
+    "site:commit": "node tools/site-tool.mjs commit",
+    "test:marketing": "python3 -m unittest tests/test_marketing_site.py"
+  }
+}

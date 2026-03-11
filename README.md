@@ -16,13 +16,36 @@ These decisions are documented canonically in the app repo:
 ## Local preview
 
 ```bash
-python3 -m http.server 4173
+node tools/site-tool.mjs build --dir _site
+node tools/site-tool.mjs validate --dir _site
+node tools/site-tool.mjs serve --dir _site --port 4173
 ```
 
-Then open:
+Open:
 
 - `http://127.0.0.1:4173/`
 - `http://127.0.0.1:4173/en/`
+
+## Local human-approval flow before commit
+
+Use this to preview first, approve second, commit third:
+
+```bash
+git add index.html en/index.html styles.css tests/test_marketing_site.py
+node tools/site-tool.mjs build --dir _site
+node tools/site-tool.mjs validate --dir _site
+node tools/site-tool.mjs serve --dir _site --port 4173
+# review in browser, then stop server (Ctrl+C)
+node tools/site-tool.mjs approve --by "Your Name" --note "Looks good"
+node tools/site-tool.mjs commit -m "Your commit message"
+git push origin main
+```
+
+How it works:
+
+- `approve` stores a snapshot hash of the staged tree in `.site-approval.json`.
+- `commit` only proceeds if staged content still matches the approved snapshot.
+- Any staged change after approval forces a new approval step.
 
 ## Tests
 
