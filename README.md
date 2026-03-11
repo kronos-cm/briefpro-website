@@ -15,7 +15,14 @@ These decisions are documented canonically in the app repo:
 
 ## Local preview
 
-Open `index.html` directly in a browser.
+```bash
+python3 -m http.server 4173
+```
+
+Then open:
+
+- `http://127.0.0.1:4173/`
+- `http://127.0.0.1:4173/en/`
 
 ## Tests
 
@@ -27,10 +34,21 @@ python3 -m unittest -v tests/test_marketing_site.py
 
 ## Deploy
 
-Deployment uses GitHub Pages via Actions.
+Deployment uses GitHub Pages via Actions with manual promotion.
 
-- Push to `main`
-- GitHub Actions builds and publishes the `./` folder to Pages
+1. Open PR to `main` (validation + Lighthouse run automatically).
+2. Merge to `main` once approved.
+3. Run workflow **Deploy GitHub Pages** manually with:
+   - `ref=main`
+   - `deploy_to_public=true`
+4. (Recommended) Configure `github-pages` environment reviewers in repo settings to require manual approval before deploy.
+
+## Monitoring
+
+- Workflow **Monitor Public Website** runs every 30 minutes and checks:
+  - `https://briefpro.de/`
+  - `https://briefpro.de/en/`
+- On failure, it opens/updates an incident issue with label `website-monitor`.
 
 ## Custom domain
 

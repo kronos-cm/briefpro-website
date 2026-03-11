@@ -1,0 +1,84 @@
+name: Monitor Public Website
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public pages
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const targets = [
+              { name: "DE Homepage", url: "https://briefpro.de/", mustContain: "BriefPro" },
+              { name: "EN Homepage", url: "https://briefpro.de/en/", mustContain: "BriefPro" },
+            ];
+            const failures = [];
+
+            for (const target of targets) {
+              try {
+                const response = await fetch(target.url, { redirect: "follow" });
+                const body = await response.text();
+                if (!response.ok) {
+                  failures.push(`${target.name}: HTTP ${response.status}`);
+                  continue;
+                }
+                if (!body.includes(target.mustContain)) {
+                  failures.push(`${target.name}: expected content marker missing`);
+                }
+              } catch (error) {
+                failures.push(`${target.name}: ${error.message}`);
+              }
+            }
+
+            if (failures.length > 0) {
+              core.setOutput("failed", "true");
+              core.setOutput("details", failures.join("\n"));
+              throw new Error(`Website health check failed:\n${failures.join("\n")}`);
+            }
+
+      - name: Create incident issue on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Website monitor alert: briefpro.de health check failed";
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const existing = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              labels: "website-monitor",
+              per_page: 50,
+            });
+
+            const alreadyOpen = existing.data.some((issue) => issue.title === title);
+            if (alreadyOpen) {
+              core.info("Open monitor issue already exists.");
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              labels: ["website-monitor", "incident"],
+              body: [
+                "Automated monitor detected a failure for the public website.",
+                "",
+                `Workflow run: https://github.com/${owner}/${repo}/actions/runs/${context.runId}`,
+                "",
+                "Please verify availability, DNS, and latest deployment status.",
+              ].join("\n"),
+            });

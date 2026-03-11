@@ -1,11 +1,21 @@
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to deploy (branch, tag, or SHA)"
+        required: false
+        default: "main"
+      deploy_to_public:
+        description: "Deploy to public GitHub Pages"
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   actions: read
@@ -24,6 +34,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || github.ref }}
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run site tests
+        run: python -m unittest tests/test_marketing_site.py
       - name: Prepare artifact
         run: |
           mkdir -p _site
@@ -44,14 +62,30 @@ jobs:
           test -f _site/styles.css
           test -f _site/assets/briefpro-logo-light.jpg
           test -f _site/assets/briefpro-logo-dark.jpg
+      - name: Lighthouse checks
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            http://127.0.0.1:4173/
+            http://127.0.0.1:4173/en/
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 1
+          configPath: ''
+          startServerCommand: python -m http.server 4173 --directory _site
 
   deploy:
     needs: validate
-    if: github.event_name != 'pull_request'
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy_to_public == true
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref || github.ref }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Prepare artifact
