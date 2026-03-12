@@ -6,16 +6,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      ref:
-        description: "Git ref to deploy (branch, tag, or SHA)"
-        required: false
-        default: "main"
-      deploy_to_public:
-        description: "Deploy to public GitHub Pages"
-        type: boolean
-        required: true
-        default: false
 
 permissions:
   actions: read
@@ -35,7 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref || github.ref }}
+          ref: ${{ github.ref }}
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -64,16 +54,13 @@ jobs:
 
   deploy:
     needs: validate
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy_to_public == true
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref || github.ref }}
+          ref: ${{ github.ref }}
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

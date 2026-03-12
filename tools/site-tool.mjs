@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
 import http from "http";
-import { spawnSync } from "child_process";
 import { promises as fs } from "fs";
 import path from "path";
 
 const cwd = process.cwd();
-const approvalFile = path.join(cwd, ".site-approval.json");
 const staticEntries = [
   "index.html",
   "impressum.html",
@@ -56,19 +54,6 @@ function parseArgs(argv) {
     }
   }
   return args;
-}
-
-function runGit(args, { inherit = false } = {}) {
-  const result = spawnSync("git", args, {
-    cwd,
-    encoding: "utf8",
-    stdio: inherit ? "inherit" : "pipe",
-  });
-  if (result.status !== 0) {
-    const output = result.stderr || result.stdout || `git ${args.join(" ")} failed`;
-    throw new Error(output.trim());
-  }
-  return (result.stdout || "").trim();
 }
 
 async function exists(target) {
@@ -188,46 +173,6 @@ async function createServer(rootDir, port) {
   });
 }
 
-async function writeApproval({ reviewer, note }) {
-  const stagedDiff = runGit(["diff", "--cached", "--name-only"]);
-  if (!stagedDiff.trim()) {
-    throw new Error("No staged changes found. Stage website files with git add before approval.");
-  }
-
-  const treeHash = runGit(["write-tree"]);
-  const branch = runGit(["rev-parse", "--abbrev-ref", "HEAD"]);
-  const payload = {
-    approved_at: new Date().toISOString(),
-    approved_by: reviewer || process.env.USER || "unknown",
-    branch,
-    tree_hash: treeHash,
-    note: note || "Local preview approved.",
-  };
-  await fs.writeFile(approvalFile, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-  console.log(`Approval recorded for tree ${treeHash}`);
-}
-
-async function ensureApprovalMatchesIndex() {
-  if (!(await exists(approvalFile))) {
-    throw new Error("Missing .site-approval.json. Run site:approve after preview.");
-  }
-  const raw = await fs.readFile(approvalFile, "utf8");
-  const approval = JSON.parse(raw);
-  const currentTree = runGit(["write-tree"]);
-  if (approval.tree_hash !== currentTree) {
-    throw new Error(
-      "Approval snapshot does not match current staged tree. Re-run site:approve.",
-    );
-  }
-}
-
-function commitWithApproval(message) {
-  if (!message) {
-    throw new Error("Commit message required. Use: node tools/site-tool.mjs commit -m \"message\"");
-  }
-  runGit(["commit", "-m", message], { inherit: true });
-}
-
 async function main() {
   const [command, ...rest] = process.argv.slice(2);
   const args = parseArgs(rest);
@@ -245,17 +190,6 @@ async function main() {
       await validateSite(outputDir);
       await createServer(outputDir, port);
       break;
-    case "approve":
-      await writeApproval({ reviewer: args.by, note: args.note });
-      break;
-    case "commit": {
-      const message = args.m || args.message;
-      await ensureApprovalMatchesIndex();
-      commitWithApproval(message);
-      await fs.rm(approvalFile, { force: true });
-      console.log("Commit created and approval snapshot cleared.");
-      break;
-    }
     default:
       console.log(
         [
@@ -265,8 +199,6 @@ async function main() {
           "  build [--dir _site]",
           "  validate [--dir _site]",
           "  serve [--dir _site] [--port 4173]",
-          "  approve [--by <name>] [--note <text>]   (requires staged changes)",
-          "  commit -m \"message\"                    (requires matching approval snapshot)",
         ].join("\n"),
       );
       process.exit(command ? 1 : 0);
