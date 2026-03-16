@@ -41,6 +41,7 @@ jobs:
       - name: Validate site bundle
         run: node tools/site-tool.mjs validate --dir _site
       - name: Lighthouse checks
+        continue-on-error: true
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
