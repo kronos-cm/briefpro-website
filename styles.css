@@ -781,3 +781,21 @@ hr{border:none;border-top:1px solid var(--line);margin:18px 0}
   margin-top: 10px;
   align-self: flex-start;
 }
+
+/* Mock Thumbnails Active States */
+.mock-thumb {
+  background: var(--bg);
+}
+.mock-thumb:hover {
+  background: var(--surface-soft) !important;
+}
+.mock-thumb.is-active {
+  border-color: var(--primary) !important;
+  background: var(--surface-tint) !important;
+}
+
+@media (max-width: 900px) {
+  .proof-showcase.custom { grid-template-columns: 1fr !important; }
+  .proof-thumb-grid { grid-template-columns: 1fr !important; }
+  .mock-ui-body { grid-template-columns: 1fr !important; }
+}
