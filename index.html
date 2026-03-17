@@ -55,7 +55,10 @@
       <div class="nav-top">
         <a class="brand" href="/" aria-label="BriefPro">
           <span class="logo" aria-hidden="true">
-            <img src="/assets/briefpro-logo-dark.jpg" alt="" />
+            <picture>
+              <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)">
+              <img src="/assets/briefpro-logo-light.jpg" alt="">
+            </picture>
           </span>
           <span class="badge">DE · Arztbrief</span>
         </a>
@@ -323,17 +326,43 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Produkt in Aktion</h2>
-          <p class="sub">Sequenzielle Workflow-Snapshots: schnell erfassbar, klickbar in Vollansicht.</p>
+          <p class="sub">Sequenzielle Workflow-Ansicht: schnell erfassbar, live gerendert.</p>
         </div>
         <div class="proof-showcase card" id="proof-showcase">
-          <div class="proof-stage">
-            <a id="proof-stage-link" class="proof-stage-link proof-zoom" data-proof-zoom href="/assets/proof-letter-chat-light.png" aria-label="Screenshot vergrößern: Schrittansicht">
-              <img id="proof-stage-image" src="/assets/proof-letter-chat-light.png" alt="BriefPro Chat mit Entwurf und Freigabe" loading="lazy" />
-            </a>
+          <div class="mock-ui-container">
+
+            <!-- Mock Header -->
+            <div class="mock-ui-header">
+              <div class="mock-ui-patient">
+                <div class="mock-ui-avatar">MM</div>
+                <div>
+                  <div class="mock-ui-name">Max Mustermann</div>
+                  <div class="mock-ui-details">Geb. 12.05.1980 · Kardiologie</div>
+                </div>
+              </div>
+              <div class="mock-ui-status-bar">
+                <span class="mock-ui-status-badge">In Bearbeitung</span>
+              </div>
+            </div>
+
+            <!-- Mock Body Layout -->
+            <div class="mock-ui-body">
+
+              <!-- Editor Area -->
+              <div id="mock-editor" class="mock-ui-editor">
+                <!-- Content will be injected via JS based on active step -->
+              </div>
+
+              <!-- Assistant Panel Area -->
+              <div id="mock-assistant" class="mock-ui-assistant">
+                 <!-- Content will be injected via JS based on active step -->
+              </div>
+
+            </div>
           </div>
           <div class="proof-meta">
-            <p class="proof-kicker">Snapshot <span id="proof-stage-step">1/3</span></p>
-            <h3 id="proof-stage-title">12‑Sektionen Entwurf mit Review‑Status</h3>
+            <p class="proof-kicker">Schritt <span id="proof-stage-step">1/3</span></p>
+            <h3 id="proof-stage-title">12‑Sektionen Entwurf</h3>
             <p id="proof-stage-copy">Vom Gespräch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.</p>
             <div class="proof-controls">
               <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Zurück</button>
@@ -342,16 +371,13 @@
           </div>
         </div>
         <div class="proof-thumb-grid" id="proof-thumb-grid">
-          <button type="button" class="proof-thumb is-active" data-proof-index="0">
-            <img src="/assets/proof-letter-chat-light.png" alt="" aria-hidden="true" />
-            <span><strong>Schritt 1 · Entwurf</strong><span>Transkript -> strukturierter Brief</span></span>
+          <button type="button" class="proof-thumb mock-thumb is-active" data-proof-index="0">
+            <span><strong>Schritt 1 · Entwurf</strong><span>Transkript → strukturierter Brief</span></span>
           </button>
-          <button type="button" class="proof-thumb" data-proof-index="1">
-            <img src="/assets/proof-letter-chat-light-sections.png" alt="" aria-hidden="true" />
+          <button type="button" class="proof-thumb mock-thumb" data-proof-index="1">
             <span><strong>Schritt 2 · Sektionen</strong><span>Klinische Struktur und Abschnittslogik</span></span>
           </button>
-          <button type="button" class="proof-thumb" data-proof-index="2">
-            <img src="/assets/proof-letter-chat-light-assistant.png" alt="" aria-hidden="true" />
+          <button type="button" class="proof-thumb mock-thumb" data-proof-index="2">
             <span><strong>Schritt 3 · Assistenz</strong><span>Review, Hinweise und nächste Aktion</span></span>
           </button>
         </div>
@@ -625,11 +651,6 @@
     </section>
   </main>
 
-  <div id="proof-lightbox" class="proof-lightbox" hidden>
-    <button type="button" class="proof-lightbox-close" aria-label="Vollbildansicht schließen">Schließen</button>
-    <img id="proof-lightbox-image" alt="" />
-  </div>
-
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-meta">
@@ -660,26 +681,29 @@
       el.addEventListener('click', () => track('CTA_Booking'));
     });
 
-    const proofFrames = [
-      {
-        src: '/assets/proof-letter-chat-light.png',
-        alt: 'BriefPro Chat mit Entwurf und Freigabe',
-        title: '12‑Sektionen Entwurf mit Review‑Status',
-        copy: 'Vom Gespräch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.'
-      },
-      {
-        src: '/assets/proof-letter-chat-light-sections.png',
-        alt: 'BriefPro Sektionenansicht im Light Theme',
-        title: 'Klinische Sektionen im Fokus',
-        copy: 'Die 12‑Sektionen-Struktur bleibt klar lesbar und unterstützt saubere klinische Dokumentation.'
-      },
-      {
-        src: '/assets/proof-letter-chat-light-assistant.png',
-        alt: 'BriefPro Assistenzpanel im Light Theme',
-        title: 'Assistenzpanel für Review und Übergabe',
-        copy: 'Korrekturhinweise, Kontext und Übergaben sind direkt im Workspace sichtbar.'
+    const renderMockStep = (index) => {
+      activeProofIndex = (index + mockStepData.length) % mockStepData.length;
+      const step = mockStepData[activeProofIndex];
+      
+      const mockEditor = document.getElementById('mock-editor');
+      const mockAssistant = document.getElementById('mock-assistant');
+      const stageTitle = document.getElementById('proof-stage-title');
+      const stageCopy = document.getElementById('proof-stage-copy');
+      const stageStep = document.getElementById('proof-stage-step');
+      
+      if (mockEditor && mockAssistant && stageTitle && stageCopy && stageStep) {
+        mockEditor.innerHTML = step.editor;
+        mockAssistant.innerHTML = step.assistant;
+        stageTitle.textContent = step.title;
+        stageCopy.textContent = step.copy;
+        stageStep.textContent = `${activeProofIndex + 1}/${mockStepData.length}`;
+        
+        const thumbButtons = Array.from(document.querySelectorAll('[data-proof-index]'));
+        thumbButtons.forEach((button) => {
+          button.classList.toggle('is-active', Number(button.getAttribute('data-proof-index')) === activeProofIndex);
+        });
       }
-    ];
+    };
 
     const stageImage = document.getElementById('proof-stage-image');
     const stageLink = document.getElementById('proof-stage-link');
@@ -690,19 +714,11 @@
     const navButtons = Array.from(document.querySelectorAll('[data-proof-nav]'));
     let activeProofIndex = 0;
 
-    const renderProofFrame = (index) => {
-      activeProofIndex = (index + proofFrames.length) % proofFrames.length;
-      const frame = proofFrames[activeProofIndex];
-      if (!frame || !stageImage || !stageLink || !stageTitle || !stageCopy || !stageStep) {
-        return;
-      }
-      stageImage.src = frame.src;
-      stageImage.alt = frame.alt;
-      stageLink.href = frame.src;
-      stageTitle.textContent = frame.title;
-      stageCopy.textContent = frame.copy;
-      stageStep.textContent = `${activeProofIndex + 1}/${proofFrames.length}`;
-      thumbButtons.forEach((button) => {
+
+    const thumbButtons = Array.from(document.querySelectorAll('[data-proof-index]'));
+    const navButtons = Array.from(document.querySelectorAll('[data-proof-nav]'));
+
+    thumbButtons.forEach((button) => {
         button.classList.toggle('is-active', Number(button.getAttribute('data-proof-index')) === activeProofIndex);
       });
     };
@@ -711,7 +727,7 @@
       button.addEventListener('click', () => {
         const nextIndex = Number(button.getAttribute('data-proof-index'));
         if (!Number.isNaN(nextIndex)) {
-          renderProofFrame(nextIndex);
+          renderMockStep(nextIndex);
         }
       });
     });
@@ -719,51 +735,12 @@
     navButtons.forEach((button) => {
       button.addEventListener('click', () => {
         const direction = button.getAttribute('data-proof-nav') === 'prev' ? -1 : 1;
-        renderProofFrame(activeProofIndex + direction);
+        renderMockStep(activeProofIndex + direction);
       });
     });
 
-    renderProofFrame(0);
+    renderMockStep(0);
 
-    const lightbox = document.getElementById('proof-lightbox');
-    const lightboxImage = document.getElementById('proof-lightbox-image');
-    const lightboxClose = document.querySelector('.proof-lightbox-close');
-
-    if (lightbox && lightboxImage && lightboxClose) {
-      const forceLightboxClosed = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-      forceLightboxClosed();
-
-      const openLightbox = (src, alt) => {
-        lightboxImage.src = src;
-        lightboxImage.alt = alt || 'Screenshot Vollansicht';
-        lightbox.hidden = false;
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeLightbox = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-
-      document.querySelectorAll('[data-proof-zoom]').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const img = link.querySelector('img');
-          openLightbox(link.getAttribute('href'), img ? img.alt : '');
-        });
-      });
-
-      lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
       });
       lightboxClose.addEventListener('click', closeLightbox);
       document.addEventListener('keydown', (event) => {
