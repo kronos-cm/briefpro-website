@@ -768,6 +768,94 @@
       }
     ];
 
+
+    let activeProofIndex = 0;
+    const mockStepData = [
+      {
+        title: '12-Section Draft',
+        copy: 'From conversation to a structured draft, including status and role indicators.',
+        editor: `
+          <div class="mock-section">
+            <div class="mock-section-title">1. Type of Letter</div>
+            <div>Provisional discharge letter for <span class="mock-highlight">54-year-old patient Max Mustermann</span>.</div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">2. Risk Factors</div>
+            <div><div class="skeleton-line medium"></div></div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">3. Diagnoses</div>
+            <div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div></div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">4. Medical History</div>
+            <div>The patient presented with <span class="mock-highlight">retrosternal pain</span> that had been present for 2 hours...</div>
+            <div style="margin-top: 10px"><div class="skeleton-line long"></div><div class="skeleton-line medium"></div></div>
+          </div>
+        `,
+        assistant: `
+          <div class="mock-chat-bubble">Chest pain, known hypertension, negative troponin/ECG findings.</div>
+          <div class="mock-chat-bubble assistant">I have created a draft for a <b>provisional discharge letter</b> with 12 sections. Please review the extracted information.</div>
+          <button class="mock-action-button">Apply draft</button>
+        `
+      },
+      {
+        title: 'Clinical Sections',
+        copy: 'The 12-section structure remains clearly readable and supports clean clinical documentation.',
+        editor: `
+          <div class="mock-section">
+            <div class="mock-section-title">7. Clinical Course</div>
+            <div>Admission via the emergency department. Under initial therapy with <span class="mock-highlight">ASA and Heparin</span>, the patient quickly became symptom-free. The ECG was unremarkable.</div>
+            <div style="margin-top: 10px"><div class="skeleton-line long"></div><div class="skeleton-line short"></div></div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">8. Discharge Medication</div>
+            <div><div class="skeleton-line medium"></div><div class="skeleton-line short"></div></div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">9. Recommendations</div>
+            <div>We recommend an <span class="mock-highlight">outpatient cardiological presentation</span> for further evaluation.</div>
+          </div>
+        `,
+        assistant: `
+          <div class="mock-chat-bubble">Add to recommendations: outpatient cardiological presentation for further evaluation.</div>
+          <div class="mock-chat-bubble assistant">I have updated the <b>recommendations</b>. Would you like me to make any other changes?</div>
+          <button class="mock-action-button" style="background: var(--surface-chip); color: var(--primary); border: 1px solid var(--surface-chip-line);">Submit for review (Resident)</button>
+        `
+      },
+      {
+        title: 'Review and Approval',
+        copy: 'Correction hints, context, and handovers are visible directly in the workspace.',
+        editor: `
+          <div style="padding: 15px; border-radius: 8px; border: 1px solid var(--surface-tint-line); background: var(--surface-tint); margin-bottom: 20px;">
+            <div style="font-weight: 600; color: var(--primary); font-size: 13px; margin-bottom: 5px;">✓ Medical Validation OK</div>
+            <div style="font-size: 13px; color: var(--text-soft);">No critical interactions or allergies detected.</div>
+          </div>
+          <div class="mock-section">
+            <div class="mock-section-title">12. Conclusion</div>
+            <div>We kindly request your continued co-treatment.</div>
+            <div style="margin-top: 20px; display: flex; gap: 40px; font-weight: 600;">
+              <div>
+                Dr. med. A. Schmidt<br>
+                <span style="font-size: 12px; font-weight: normal; color: var(--muted);">Resident</span>
+              </div>
+              <div>
+                Prof. Dr. med. K. Weber<br>
+                <span style="font-size: 12px; font-weight: normal; color: var(--muted);">Attending Physician</span>
+              </div>
+            </div>
+          </div>
+        `,
+        assistant: `
+          <div class="mock-chat-bubble">Letter is ready for attending physician approval.</div>
+          <div class="mock-chat-bubble assistant">The status has been set to <b>Provisionally approved</b>. The letter is now ready for Attending Physician approval.</div>
+          <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="mock-action-button" style="flex: 1;">Export PDF</button>
+            <button class="mock-action-button" style="flex: 1; background: var(--surface-strong); color: var(--fg); border: 1px solid var(--line);">Copy Text</button>
+          </div>
+        `
+      }
+    ];
     const renderMockStep = (index) => {
       activeProofIndex = (index + mockStepData.length) % mockStepData.length;
       const step = mockStepData[activeProofIndex];
