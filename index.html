@@ -699,7 +699,8 @@
         stageStep.textContent = `${activeProofIndex + 1}/${mockStepData.length}`;
         
         // Update thumbnails
-        const thumbButtons = Array.from(document.querySelectorAll('.mock-thumb'));
+        let activeProofIndex = 0;
+    const thumbButtons = Array.from(document.querySelectorAll('.mock-thumb'));
         thumbButtons.forEach((button) => {
           button.classList.toggle('is-active', Number(button.getAttribute('data-proof-index')) === activeProofIndex);
         });
