@@ -323,40 +323,70 @@
     <section id="proof" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Product in action</h2>
-          <p class="sub">Sequential workflow snapshots: easy to scan, clickable to fullscreen.</p>
+          <h2 class="section-title">Product in Action</h2>
+          <p class="sub">Interactive workflow: from consultation to approved discharge letter.</p>
         </div>
-        <div class="proof-showcase card" id="proof-showcase">
-          <div class="proof-stage">
-            <a id="proof-stage-link" class="proof-stage-link proof-zoom" data-proof-zoom href="/assets/proof-letter-chat-light.png" aria-label="Zoom screenshot: workflow frame">
-              <img id="proof-stage-image" src="/assets/proof-letter-chat-light.png" alt="BriefPro chat with draft and approval" loading="lazy" />
-            </a>
+        <div style="display:none" aria-hidden="true">
+          <img src="/assets/proof-letter-chat-light.png" alt="" />
+          <img src="/assets/proof-letter-chat-light-sections.png" alt="" />
+          <img src="/assets/proof-letter-chat-light-assistant.png" alt="" />
+        </div>
+        <div class="mock-ui" id="proof-showcase">
+          <div class="mock-ui-header">
+            <div class="mock-ui-dots"><span></span><span></span><span></span></div>
+            <span class="mock-ui-title">BriefPro — <span id="proof-stage-step">1/3</span></span>
           </div>
-          <div class="proof-meta">
-            <p class="proof-kicker">Snapshot <span id="proof-stage-step">1/3</span></p>
-            <h3 id="proof-stage-title">12‑section draft with approval status</h3>
-            <p id="proof-stage-copy">From consultation to a structured draft with explicit review and role status.</p>
-            <div class="proof-controls">
-              <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Back</button>
-              <button type="button" class="btn secondary proof-nav" data-proof-nav="next">Next</button>
+          <div class="mock-ui-body" id="mock-ui-body">
+            <div class="mock-ui-editor" id="mock-editor">
+              <div class="mock-section">
+                <div class="mock-section-title">1. Letter Type</div>
+                <div>Preliminary discharge letter for <span class="mock-highlight">54-year-old patient Max Mustermann</span>.</div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">2. Risk Factors</div>
+                <div><div class="skeleton-line medium"></div></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">3. Diagnoses</div>
+                <div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">4. History</div>
+                <div>Patient presented with <span class="mock-highlight">retrosternal chest pain</span> persisting for 2 hours.</div>
+                <div><div class="skeleton-line long"></div><div class="skeleton-line medium"></div></div>
+              </div>
+            </div>
+            <div class="mock-ui-assistant" id="mock-assistant">
+              <div class="mock-chat-bubble">Chest pain, known hypertension, negative troponin/ECG findings.</div>
+              <div class="mock-chat-bubble assistant">I have created a draft <b>preliminary discharge letter</b> with 12 sections. Please review the extracted information.</div>
+              <div class="mock-action-btn">Accept Draft</div>
             </div>
           </div>
         </div>
-        <div class="proof-thumb-grid" id="proof-thumb-grid">
+        <div class="proof-meta" style="margin-top:16px;padding:0 4px">
+          <h3 id="proof-stage-title" style="font-family:var(--heading-font);font-size:22px;margin:0 0 6px">12-Section Draft with Review Status</h3>
+          <p id="proof-stage-copy" style="color:var(--muted);font-size:15px;margin:0 0 12px">From consultation to a structured draft with explicit review and role status.</p>
+          <div class="proof-controls">
+            <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Back</button>
+            <button type="button" class="btn secondary proof-nav" data-proof-nav="next">Next</button>
+          </div>
+        </div>
+        <div class="proof-thumb-grid" id="proof-thumb-grid" style="margin-top:16px">
           <button type="button" class="proof-thumb is-active" data-proof-index="0">
-            <img src="/assets/proof-letter-chat-light.png" alt="" aria-hidden="true" />
-            <span><strong>Step 1 · Draft</strong><span>Transcript -> structured letter</span></span>
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">📝</span>
+            <span><strong>Step 1 · Draft</strong><span>Transcript → structured letter</span></span>
           </button>
           <button type="button" class="proof-thumb" data-proof-index="1">
-            <img src="/assets/proof-letter-chat-light-sections.png" alt="" aria-hidden="true" />
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🏥</span>
             <span><strong>Step 2 · Sections</strong><span>Clinical structure and section logic</span></span>
           </button>
           <button type="button" class="proof-thumb" data-proof-index="2">
-            <img src="/assets/proof-letter-chat-light-assistant.png" alt="" aria-hidden="true" />
-            <span><strong>Step 3 · Assistant</strong><span>Review hints and next action</span></span>
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">✅</span>
+            <span><strong>Step 3 · Approval</strong><span>Review, validation and export</span></span>
           </button>
         </div>
-        <div class="cta center">
+        <div class="cta center" style="margin-top:16px">
+          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book Live Demo</a>
           <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
         </div>
       </div>
@@ -661,119 +691,62 @@
       el.addEventListener('click', () => track('CTA_Booking'));
     });
 
-    const proofFrames = [
+    const mockSteps = [
       {
-        src: '/assets/proof-letter-chat-light.png',
-        alt: 'BriefPro chat with draft and approval',
-        title: '12‑section draft with approval status',
-        copy: 'From consultation to a structured draft with explicit review and role status.'
+        title: '12-Section Draft with Review Status',
+        copy: 'From consultation to a structured draft with explicit review and role status.',
+        editor: '<div class="mock-section"><div class="mock-section-title">1. Letter Type</div><div>Preliminary discharge letter for <span class="mock-highlight">54-year-old patient Max Mustermann</span>.</div></div><div class="mock-section"><div class="mock-section-title">2. Risk Factors</div><div><div class="skeleton-line medium"></div></div></div><div class="mock-section"><div class="mock-section-title">3. Diagnoses</div><div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div></div></div><div class="mock-section"><div class="mock-section-title">4. History</div><div>Patient presented with <span class="mock-highlight">retrosternal chest pain</span> persisting for 2 hours.</div><div><div class="skeleton-line long"></div><div class="skeleton-line medium"></div></div></div>',
+        assistant: '<div class="mock-chat-bubble">Chest pain, known hypertension, negative troponin/ECG findings.</div><div class="mock-chat-bubble assistant">I have created a draft <b>preliminary discharge letter</b> with 12 sections. Please review the extracted information.</div><div class="mock-action-btn">Accept Draft</div>'
       },
       {
-        src: '/assets/proof-letter-chat-light-sections.png',
-        alt: 'BriefPro section-focused view in light theme',
-        title: 'Clinical sections in focus',
-        copy: 'The 12-section structure remains clear and supports clean clinical documentation.'
+        title: 'Clinical Sections in Focus',
+        copy: 'The 12-section structure remains clear and supports clean clinical documentation.',
+        editor: '<div class="mock-section"><div class="mock-section-title">7. Course</div><div>Admission via emergency department. Under initial therapy with <span class="mock-highlight">ASA and heparin</span>, rapid resolution of symptoms.</div><div><div class="skeleton-line long"></div><div class="skeleton-line short"></div></div></div><div class="mock-section"><div class="mock-section-title">8. Discharge Medication</div><div><div class="skeleton-line medium"></div><div class="skeleton-line short"></div></div></div><div class="mock-section"><div class="mock-section-title">9. Recommendations</div><div>We recommend an <span class="mock-highlight">outpatient cardiology follow-up</span> for further evaluation.</div></div>',
+        assistant: '<div class="mock-chat-bubble">Add to recommendations: outpatient cardiology follow-up for further evaluation.</div><div class="mock-chat-bubble assistant">Updated <b>Recommendations</b>. Would you like any further changes?</div><div class="mock-action-btn">Submit for Approval (Resident)</div>'
       },
       {
-        src: '/assets/proof-letter-chat-light-assistant.png',
-        alt: 'BriefPro assistant panel in light theme',
-        title: 'Assistant panel for review handover',
-        copy: 'Guidance, context, and handover actions stay visible inside the workspace.'
+        title: 'Review and Approval',
+        copy: 'Guidance, context, and handover actions stay visible inside the workspace.',
+        editor: '<div class="mock-validation"><strong>\u2713 Medical Validation OK</strong><span>No critical interactions or allergies detected.</span></div><div class="mock-section" style="margin-top:14px"><div class="mock-section-title">12. Closing</div><div>We kindly ask for continued co-management.</div><div style="margin-top:16px;display:flex;gap:32px;font-weight:600;font-size:13px"><div>Dr. med. A. Schmidt<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Resident</span></div><div>Prof. Dr. med. K. Weber<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Attending</span></div></div></div>',
+        assistant: '<div class="mock-chat-bubble">Letter ready for attending approval.</div><div class="mock-chat-bubble assistant">Status set to <b>Preliminary approved</b>. Letter is now pending attending sign-off.</div><div style="display:flex;gap:8px;margin-top:4px"><div class="mock-action-btn">Export PDF</div><div class="mock-action-btn" style="background:transparent;border-color:var(--line);color:var(--fg)">Copy</div></div>'
       }
     ];
 
-    const stageImage = document.getElementById('proof-stage-image');
-    const stageLink = document.getElementById('proof-stage-link');
     const stageTitle = document.getElementById('proof-stage-title');
     const stageCopy = document.getElementById('proof-stage-copy');
     const stageStep = document.getElementById('proof-stage-step');
+    const mockEditor = document.getElementById('mock-editor');
+    const mockAssistant = document.getElementById('mock-assistant');
     const thumbButtons = Array.from(document.querySelectorAll('[data-proof-index]'));
     const navButtons = Array.from(document.querySelectorAll('[data-proof-nav]'));
     let activeProofIndex = 0;
 
-    const renderProofFrame = (index) => {
-      activeProofIndex = (index + proofFrames.length) % proofFrames.length;
-      const frame = proofFrames[activeProofIndex];
-      if (!frame || !stageImage || !stageLink || !stageTitle || !stageCopy || !stageStep) {
-        return;
-      }
-      stageImage.src = frame.src;
-      stageImage.alt = frame.alt;
-      stageLink.href = frame.src;
-      stageTitle.textContent = frame.title;
-      stageCopy.textContent = frame.copy;
-      stageStep.textContent = `${activeProofIndex + 1}/${proofFrames.length}`;
-      thumbButtons.forEach((button) => {
-        button.classList.toggle('is-active', Number(button.getAttribute('data-proof-index')) === activeProofIndex);
+    const renderMockStep = (index) => {
+      activeProofIndex = (index + mockSteps.length) % mockSteps.length;
+      const step = mockSteps[activeProofIndex];
+      if (!step || !mockEditor || !mockAssistant) { return; }
+      mockEditor.innerHTML = step.editor;
+      mockAssistant.innerHTML = step.assistant;
+      if (stageTitle) { stageTitle.textContent = step.title; }
+      if (stageCopy) { stageCopy.textContent = step.copy; }
+      if (stageStep) { stageStep.textContent = `${activeProofIndex + 1}/${mockSteps.length}`; }
+      thumbButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', Number(btn.getAttribute('data-proof-index')) === activeProofIndex);
       });
     };
 
-    thumbButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const nextIndex = Number(button.getAttribute('data-proof-index'));
-        if (!Number.isNaN(nextIndex)) {
-          renderProofFrame(nextIndex);
-        }
+    thumbButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const i = Number(btn.getAttribute('data-proof-index'));
+        if (!Number.isNaN(i)) { renderMockStep(i); }
       });
     });
-
-    navButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const direction = button.getAttribute('data-proof-nav') === 'prev' ? -1 : 1;
-        renderProofFrame(activeProofIndex + direction);
+    navButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        renderMockStep(activeProofIndex + (btn.getAttribute('data-proof-nav') === 'prev' ? -1 : 1));
       });
     });
-
-    renderProofFrame(0);
-
-    const lightbox = document.getElementById('proof-lightbox');
-    const lightboxImage = document.getElementById('proof-lightbox-image');
-    const lightboxClose = document.querySelector('.proof-lightbox-close');
-
-    if (lightbox && lightboxImage && lightboxClose) {
-      const forceLightboxClosed = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-      forceLightboxClosed();
-
-      const openLightbox = (src, alt) => {
-        lightboxImage.src = src;
-        lightboxImage.alt = alt || 'Fullscreen screenshot';
-        lightbox.hidden = false;
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeLightbox = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-
-      document.querySelectorAll('[data-proof-zoom]').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const img = link.querySelector('img');
-          openLightbox(link.getAttribute('href'), img ? img.alt : '');
-        });
-      });
-
-      lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-      lightboxClose.addEventListener('click', closeLightbox);
-      document.addEventListener('keydown', (event) => {
-        if (!lightbox.hidden && event.key === 'Escape') {
-          closeLightbox();
-        }
-      });
-      window.addEventListener('pageshow', forceLightboxClosed);
-    }
+    renderMockStep(0);
   </script>
 </body>
 </html>

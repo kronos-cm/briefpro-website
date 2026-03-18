@@ -324,39 +324,69 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Produkt in Aktion</h2>
-          <p class="sub">Sequenzielle Workflow-Snapshots: schnell erfassbar, klickbar in Vollansicht.</p>
+          <p class="sub">Interaktiver Workflow: vom Gespräch zum freigegebenen Arztbrief.</p>
         </div>
-        <div class="proof-showcase card" id="proof-showcase">
-          <div class="proof-stage">
-            <a id="proof-stage-link" class="proof-stage-link proof-zoom" data-proof-zoom href="/assets/proof-letter-chat-light.png" aria-label="Screenshot vergrößern: Schrittansicht">
-              <img id="proof-stage-image" src="/assets/proof-letter-chat-light.png" alt="BriefPro Chat mit Entwurf und Freigabe" loading="lazy" />
-            </a>
+        <div style="display:none" aria-hidden="true">
+          <img src="/assets/proof-letter-chat-light.png" alt="" />
+          <img src="/assets/proof-letter-chat-light-sections.png" alt="" />
+          <img src="/assets/proof-letter-chat-light-assistant.png" alt="" />
+        </div>
+        <div class="mock-ui" id="proof-showcase">
+          <div class="mock-ui-header">
+            <div class="mock-ui-dots"><span></span><span></span><span></span></div>
+            <span class="mock-ui-title">BriefPro — <span id="proof-stage-step">1/3</span></span>
           </div>
-          <div class="proof-meta">
-            <p class="proof-kicker">Snapshot <span id="proof-stage-step">1/3</span></p>
-            <h3 id="proof-stage-title">12‑Sektionen Entwurf mit Review‑Status</h3>
-            <p id="proof-stage-copy">Vom Gespräch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.</p>
-            <div class="proof-controls">
-              <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Zurück</button>
-              <button type="button" class="btn secondary proof-nav" data-proof-nav="next">Weiter</button>
+          <div class="mock-ui-body" id="mock-ui-body">
+            <div class="mock-ui-editor" id="mock-editor">
+              <div class="mock-section">
+                <div class="mock-section-title">1. Art von Brief</div>
+                <div>Vorläufiger Entlassungsbrief für den <span class="mock-highlight">54-jährigen Patienten Max Mustermann</span>.</div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">2. Risikofaktoren</div>
+                <div><div class="skeleton-line medium"></div></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">3. Diagnosen</div>
+                <div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div></div>
+              </div>
+              <div class="mock-section">
+                <div class="mock-section-title">4. Anamnese</div>
+                <div>Der Patient stellte sich mit seit 2 Stunden bestehenden <span class="mock-highlight">retrosternalen Schmerzen</span> vor.</div>
+                <div><div class="skeleton-line long"></div><div class="skeleton-line medium"></div></div>
+              </div>
+            </div>
+            <div class="mock-ui-assistant" id="mock-assistant">
+              <div class="mock-chat-bubble">Thoraxschmerz, bekannte Hypertonie, negativer Troponin/EKG-Befund.</div>
+              <div class="mock-chat-bubble assistant">Ich habe den Entwurf für einen <b>vorläufigen Entlassungsbrief</b> mit 12 Sektionen erstellt. Bitte überprüfen Sie die extrahierten Informationen.</div>
+              <div class="mock-action-btn">Entwurf übernehmen</div>
             </div>
           </div>
         </div>
-        <div class="proof-thumb-grid" id="proof-thumb-grid">
+        <div class="proof-meta" style="margin-top:16px;padding:0 4px">
+          <h3 id="proof-stage-title" style="font-family:var(--heading-font);font-size:22px;margin:0 0 6px">12‑Sektionen Entwurf mit Review‑Status</h3>
+          <p id="proof-stage-copy" style="color:var(--muted);font-size:15px;margin:0 0 12px">Vom Gespräch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.</p>
+          <div class="proof-controls">
+            <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Zurück</button>
+            <button type="button" class="btn secondary proof-nav" data-proof-nav="next">Weiter</button>
+          </div>
+        </div>
+        <div class="proof-thumb-grid" id="proof-thumb-grid" style="margin-top:16px">
           <button type="button" class="proof-thumb is-active" data-proof-index="0">
-            <img src="/assets/proof-letter-chat-light.png" alt="" aria-hidden="true" />
-            <span><strong>Schritt 1 · Entwurf</strong><span>Transkript -> strukturierter Brief</span></span>
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">📝</span>
+            <span><strong>Schritt 1 · Entwurf</strong><span>Transkript → strukturierter Brief</span></span>
           </button>
           <button type="button" class="proof-thumb" data-proof-index="1">
-            <img src="/assets/proof-letter-chat-light-sections.png" alt="" aria-hidden="true" />
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🏥</span>
             <span><strong>Schritt 2 · Sektionen</strong><span>Klinische Struktur und Abschnittslogik</span></span>
           </button>
           <button type="button" class="proof-thumb" data-proof-index="2">
-            <img src="/assets/proof-letter-chat-light-assistant.png" alt="" aria-hidden="true" />
-            <span><strong>Schritt 3 · Assistenz</strong><span>Review, Hinweise und nächste Aktion</span></span>
+            <span style="width:40px;height:40px;border-radius:10px;background:rgba(2,132,199,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">✅</span>
+            <span><strong>Schritt 3 · Freigabe</strong><span>Review, Validierung und Export</span></span>
           </button>
         </div>
-        <div class="cta center">
+        <div class="cta center" style="margin-top:16px">
+          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Live-Demo buchen</a>
           <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen">Pilot anfragen</a>
         </div>
       </div>
@@ -661,119 +691,62 @@
       el.addEventListener('click', () => track('CTA_Booking'));
     });
 
-    const proofFrames = [
+    const mockSteps = [
       {
-        src: '/assets/proof-letter-chat-light.png',
-        alt: 'BriefPro Chat mit Entwurf und Freigabe',
-        title: '12‑Sektionen Entwurf mit Review‑Status',
-        copy: 'Vom Gespräch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.'
+        title: '12\u2011Sektionen Entwurf mit Review\u2011Status',
+        copy: 'Vom Gespr\u00e4ch in einen strukturierten Entwurf, inklusive Status- und Rollenhinweisen.',
+        editor: '<div class="mock-section"><div class="mock-section-title">1. Art von Brief</div><div>Vorl\u00e4ufiger Entlassungsbrief f\u00fcr den <span class="mock-highlight">54-j\u00e4hrigen Patienten Max Mustermann</span>.</div></div><div class="mock-section"><div class="mock-section-title">2. Risikofaktoren</div><div><div class="skeleton-line medium"></div></div></div><div class="mock-section"><div class="mock-section-title">3. Diagnosen</div><div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div></div></div><div class="mock-section"><div class="mock-section-title">4. Anamnese</div><div>Der Patient stellte sich mit seit 2 Stunden bestehenden <span class="mock-highlight">retrosternalen Schmerzen</span> vor.</div><div><div class="skeleton-line long"></div><div class="skeleton-line medium"></div></div></div>',
+        assistant: '<div class="mock-chat-bubble">Thoraxschmerz, bekannte Hypertonie, negativer Troponin/EKG-Befund.</div><div class="mock-chat-bubble assistant">Ich habe den Entwurf f\u00fcr einen <b>vorl\u00e4ufigen Entlassungsbrief</b> mit 12 Sektionen erstellt. Bitte \u00fcberpr\u00fcfen Sie die extrahierten Informationen.</div><div class="mock-action-btn">Entwurf \u00fcbernehmen</div>'
       },
       {
-        src: '/assets/proof-letter-chat-light-sections.png',
-        alt: 'BriefPro Sektionenansicht im Light Theme',
         title: 'Klinische Sektionen im Fokus',
-        copy: 'Die 12‑Sektionen-Struktur bleibt klar lesbar und unterstützt saubere klinische Dokumentation.'
+        copy: 'Die 12\u2011Sektionen-Struktur bleibt klar lesbar und unterst\u00fctzt saubere klinische Dokumentation.',
+        editor: '<div class="mock-section"><div class="mock-section-title">7. Verlauf</div><div>Die Aufnahme erfolgte \u00fcber die Notaufnahme. Unter der initialen Therapie mit <span class="mock-highlight">ASS und Heparin</span> zeigte sich eine rasche Beschwerdefreiheit.</div><div><div class="skeleton-line long"></div><div class="skeleton-line short"></div></div></div><div class="mock-section"><div class="mock-section-title">8. Entlassmedikation</div><div><div class="skeleton-line medium"></div><div class="skeleton-line short"></div></div></div><div class="mock-section"><div class="mock-section-title">9. Empfehlungen</div><div>Wir empfehlen eine <span class="mock-highlight">ambulante kardiologische Vorstellung</span> zur weiteren Abkl\u00e4rung.</div></div>',
+        assistant: '<div class="mock-chat-bubble">F\u00fcge bei Empfehlungen hinzu: ambulante kardiologische Vorstellung zur weiteren Abkl\u00e4rung.</div><div class="mock-chat-bubble assistant">Habe die <b>Empfehlungen</b> aktualisiert. Soll ich noch weitere \u00c4nderungen vornehmen?</div><div class="mock-action-btn">Zur Freigabe (Assistenzarzt)</div>'
       },
       {
-        src: '/assets/proof-letter-chat-light-assistant.png',
-        alt: 'BriefPro Assistenzpanel im Light Theme',
-        title: 'Assistenzpanel für Review und Übergabe',
-        copy: 'Korrekturhinweise, Kontext und Übergaben sind direkt im Workspace sichtbar.'
+        title: 'Review und Freigabe',
+        copy: 'Korrekturhinweise, Kontext und \u00dcbergaben sind direkt im Workspace sichtbar.',
+        editor: '<div class="mock-validation"><strong>\u2713 Medizinische Validierung OK</strong><span>Keine kritischen Wechselwirkungen oder Allergien erkannt.</span></div><div class="mock-section" style="margin-top:14px"><div class="mock-section-title">12. Schluss</div><div>Wir bitten um freundliche Mitbetreuung.</div><div style="margin-top:16px;display:flex;gap:32px;font-weight:600;font-size:13px"><div>Dr. med. A. Schmidt<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Assistenzarzt</span></div><div>Prof. Dr. med. K. Weber<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Oberarzt</span></div></div></div>',
+        assistant: '<div class="mock-chat-bubble">Brief ist fertig zur fach\u00e4rztlichen Freigabe.</div><div class="mock-chat-bubble assistant">Der Status wurde auf <b>Vorl\u00e4ufig freigegeben</b> gesetzt. Der Brief liegt nun zur Oberarzt-Freigabe bereit.</div><div style="display:flex;gap:8px;margin-top:4px"><div class="mock-action-btn">PDF Exportieren</div><div class="mock-action-btn" style="background:transparent;border-color:var(--line);color:var(--fg)">Kopieren</div></div>'
       }
     ];
 
-    const stageImage = document.getElementById('proof-stage-image');
-    const stageLink = document.getElementById('proof-stage-link');
     const stageTitle = document.getElementById('proof-stage-title');
     const stageCopy = document.getElementById('proof-stage-copy');
     const stageStep = document.getElementById('proof-stage-step');
+    const mockEditor = document.getElementById('mock-editor');
+    const mockAssistant = document.getElementById('mock-assistant');
     const thumbButtons = Array.from(document.querySelectorAll('[data-proof-index]'));
     const navButtons = Array.from(document.querySelectorAll('[data-proof-nav]'));
     let activeProofIndex = 0;
 
-    const renderProofFrame = (index) => {
-      activeProofIndex = (index + proofFrames.length) % proofFrames.length;
-      const frame = proofFrames[activeProofIndex];
-      if (!frame || !stageImage || !stageLink || !stageTitle || !stageCopy || !stageStep) {
-        return;
-      }
-      stageImage.src = frame.src;
-      stageImage.alt = frame.alt;
-      stageLink.href = frame.src;
-      stageTitle.textContent = frame.title;
-      stageCopy.textContent = frame.copy;
-      stageStep.textContent = `${activeProofIndex + 1}/${proofFrames.length}`;
-      thumbButtons.forEach((button) => {
-        button.classList.toggle('is-active', Number(button.getAttribute('data-proof-index')) === activeProofIndex);
+    const renderMockStep = (index) => {
+      activeProofIndex = (index + mockSteps.length) % mockSteps.length;
+      const step = mockSteps[activeProofIndex];
+      if (!step || !mockEditor || !mockAssistant) { return; }
+      mockEditor.innerHTML = step.editor;
+      mockAssistant.innerHTML = step.assistant;
+      if (stageTitle) { stageTitle.textContent = step.title; }
+      if (stageCopy) { stageCopy.textContent = step.copy; }
+      if (stageStep) { stageStep.textContent = `${activeProofIndex + 1}/${mockSteps.length}`; }
+      thumbButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', Number(btn.getAttribute('data-proof-index')) === activeProofIndex);
       });
     };
 
-    thumbButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const nextIndex = Number(button.getAttribute('data-proof-index'));
-        if (!Number.isNaN(nextIndex)) {
-          renderProofFrame(nextIndex);
-        }
+    thumbButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const i = Number(btn.getAttribute('data-proof-index'));
+        if (!Number.isNaN(i)) { renderMockStep(i); }
       });
     });
-
-    navButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const direction = button.getAttribute('data-proof-nav') === 'prev' ? -1 : 1;
-        renderProofFrame(activeProofIndex + direction);
+    navButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        renderMockStep(activeProofIndex + (btn.getAttribute('data-proof-nav') === 'prev' ? -1 : 1));
       });
     });
-
-    renderProofFrame(0);
-
-    const lightbox = document.getElementById('proof-lightbox');
-    const lightboxImage = document.getElementById('proof-lightbox-image');
-    const lightboxClose = document.querySelector('.proof-lightbox-close');
-
-    if (lightbox && lightboxImage && lightboxClose) {
-      const forceLightboxClosed = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-      forceLightboxClosed();
-
-      const openLightbox = (src, alt) => {
-        lightboxImage.src = src;
-        lightboxImage.alt = alt || 'Screenshot Vollansicht';
-        lightbox.hidden = false;
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeLightbox = () => {
-        lightbox.hidden = true;
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-        document.body.style.overflow = '';
-      };
-
-      document.querySelectorAll('[data-proof-zoom]').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const img = link.querySelector('img');
-          openLightbox(link.getAttribute('href'), img ? img.alt : '');
-        });
-      });
-
-      lightbox.addEventListener('click', (event) => {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-      lightboxClose.addEventListener('click', closeLightbox);
-      document.addEventListener('keydown', (event) => {
-        if (!lightbox.hidden && event.key === 'Escape') {
-          closeLightbox();
-        }
-      });
-      window.addEventListener('pageshow', forceLightboxClosed);
-    }
+    renderMockStep(0);
   </script>
 </body>
 </html>
