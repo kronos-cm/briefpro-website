@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BriefPro — Medical letters in minutes. Voice-first. Safe.</title>
-  <meta name="description" content="BriefPro is a voice-first assistant for German medical letters: record → transcript → structured draft → review & approval → export." />
+  <meta name="description" content="BriefPro — medical letter software (Arztbrief Software) for German clinics. Voice-first speech recognition, AI-powered 12-section drafting, role-based approvals, and export. GDPR-compliant medical documentation with full audit trail." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://briefpro.de/en/" />
   <link rel="alternate" href="https://briefpro.de/" hreflang="de" />
@@ -41,6 +41,24 @@
       "name": "BriefPro",
       "url": "https://briefpro.de",
       "inLanguage": "en-US"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BriefPro",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "Medical letter software (Arztbrief Software) for German clinics: voice-first speech recognition, AI-powered 12-section drafting, role-based approvals, and export. GDPR-compliant.",
+      "url": "https://briefpro.de",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Pilot phase — pricing individually"
+      },
+      "featureList": ["Voice-first speech recognition", "12-section medical letter drafting", "Role-based approvals", "Audit trail", "PDF/HL7 export", "GDPR-compliant"]
     }
   </script>
 </head>
@@ -91,8 +109,8 @@
           <div class="cta">
             <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book live demo</a>
             <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
-            <a class="btn ghost" href="#walkthrough">See 3-minute workflow</a>
           </div>
+          <p class="note"><a class="text-link" href="#walkthrough">See 3-minute workflow →</a></p>
           <p class="note">Default: no long-term audio retention. We persist transcripts and approval/audit records for traceability.</p>
         </div>
         <aside class="hero-visual" aria-label="Platform preview">
@@ -473,55 +491,30 @@
     </section>
 
     <section id="safety" class="section">
-      <div class="container split">
-        <div class="card">
-          <h3>Privacy-by-default</h3>
-          <p>Conservative start: audio is processed for transcription and not stored long-term by default. We persist transcript, draft and approvals.</p>
-        </div>
-        <div class="card">
-          <h3>Integration path</h3>
-          <p>Export first, connector later: Cobra CRM first. Hospitals typically integrate via HL7 v2 / FHIR through an interface engine.</p>
-        </div>
-      </div>
       <div class="container">
-        <div class="card">
-          <h3>Trust & roadmap</h3>
-          <p>BriefPro runs with mandatory review, approval gates, and a full audit trail (who did what, when). BriefPro supports documentation and does not replace clinical decision-making. Certification and compliance topics (e.g. ISO/BSI) are handled as a transparent roadmap, not marketing claims.</p>
+        <h2 class="section-title">Trust & Compliance</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>GDPR-compliant</h3>
+            <p>Data minimization, DPA/DPIA documentation, hosted in Germany. Audio is not stored long-term by default.</p>
+          </div>
+          <div class="card">
+            <h3>Audit trail</h3>
+            <p>Every change is traceable: who changed what, when, and who approved it. Mandatory review with approval gates.</p>
+          </div>
+          <div class="card">
+            <h3>Role-based approvals</h3>
+            <p>Clear status chain: draft → resident approval → attending approval → export. No bypassing possible.</p>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <div id="compliance-roadmap" class="card cert-card">
-          <div class="section-header compact">
-            <h3>Certification & compliance path (roadmap)</h3>
-            <p class="sub">A compact status view: available now, in progress, and pending formal regulatory assessment.</p>
-          </div>
-          <div class="cert-grid">
-            <div class="cert-item">
-              <div class="cert-icon">GDPR</div>
-              <h4>GDPR / privacy</h4>
-              <p>Data minimization with DPA/DPIA documentation ready for procurement and privacy review.</p>
-              <span class="cert-status in-progress">Operational / formalization in progress</span>
-            </div>
-            <div class="cert-item">
-              <div class="cert-icon">ISO 27001</div>
-              <h4>ISMS</h4>
-              <p>Security controls, access governance, logging, and runbooks as ISMS foundations.</p>
-              <span class="cert-status roadmap">Roadmap</span>
-            </div>
-            <div class="cert-item">
-              <div class="cert-icon">ISO 13485</div>
-              <h4>QMS (MedTech)</h4>
-              <p>QMS track if final intended use and strategy require a medical-device compliance path.</p>
-              <span class="cert-status roadmap">Roadmap</span>
-            </div>
-            <div class="cert-item">
-              <div class="cert-icon">CE</div>
-              <h4>EU MDR / CE</h4>
-              <p>Depends on intended use and risk class. No public claim before formal regulatory assessment.</p>
-              <span class="cert-status review">Regulatory assessment required</span>
-            </div>
-          </div>
-          <p class="note">Note: BriefPro does not claim these certifications on the website today. We show a transparent path for pilot and procurement readiness.</p>
+        <div class="card" id="compliance-roadmap">
+          <h3>Integration & compliance roadmap</h3>
+          <p>Cobra CRM first, hospitals via HL7 v2 / FHIR. Certification path (ISO 27001, ISO 13485, EU MDR) as a transparent roadmap — no claims, only verifiable steps.</p>
+          <p class="note">BriefPro supports documentation and does not replace clinical decision-making. Detailed compliance materials are available upon request for procurement conversations.</p>
+        </div>
+        <div class="cta center">
+          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book Live Demo</a>
+          <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Compliance%20Info">Request compliance materials</a>
         </div>
       </div>
     </section>
