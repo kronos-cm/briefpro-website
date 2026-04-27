@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Outer circle ring -->
-  <circle cx="32" cy="32" r="29" fill="none" stroke="#5a8bbe" stroke-width="3.2"/>
-  <!-- White gap ring -->
-  <circle cx="32" cy="32" r="25" fill="#fff"/>
-  <!-- Inner filled circle -->
+  <!-- Dark theme variant — lighter ring on dark background -->
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#6ba0d4" stroke-width="3.2"/>
+  <!-- Dark gap ring -->
+  <circle cx="32" cy="32" r="25" fill="#0b1120"/>
+  <!-- Inner filled circle (lighter blue for dark bg) -->
   <circle cx="32" cy="32" r="23" fill="#5a8bbe"/>
-  <!-- Custom BriefPro "B" with top-left notch (B+P hybrid glyph) -->
+  <!-- Custom BriefPro "B" with top-left notch -->
   <path d="
     M23 16 L23 48 L34 48
     C37.5 48 40 47.2 41.8 45.5
