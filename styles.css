@@ -134,9 +134,9 @@ a{color:inherit}img{max-width:100%;display:block}
 .card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:20px;box-shadow:0 14px 36px rgba(15,23,42,.08)}
 .card h3{margin:2px 0 8px;font-size:16px}
 .card p{margin:0;color:rgba(2,6,23,.74);font-size:14px}
-.feature-list{margin-top:14px}
-.feature-list ul{margin:8px 0 0;padding-left:18px;color:rgba(2,6,23,.74);font-size:14px}
-.feature-list li{margin:8px 0}
+.feature-list{margin:14px 0 0;padding:0;list-style:none}
+.feature-list li{margin:10px 0;padding-left:22px;position:relative;color:rgba(2,6,23,.74);font-size:14px;line-height:1.5}
+.feature-list li::before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:700}
 .comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:920px){.comparison-grid{grid-template-columns:1fr}}
 .comparison-card ul{margin:8px 0 0;padding-left:18px;color:rgba(2,6,23,.74);font-size:14px}
