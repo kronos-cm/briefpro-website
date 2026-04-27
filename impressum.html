@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Impressum — BriefPro</title>
   <meta name="robots" content="noindex" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0284c7" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -12,8 +16,10 @@
     <div class="container nav-inner">
       <a class="brand" href="/" aria-label="BriefPro">
         <picture class="logo" aria-hidden="true">
+          <source srcset="/assets/briefpro-logo-dark.webp" media="(prefers-color-scheme: dark)" type="image/webp" />
           <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)" />
-          <img src="/assets/briefpro-logo-light.jpg" alt="" />
+          <source srcset="/assets/briefpro-logo-light.webp" type="image/webp" />
+          <img src="/assets/briefpro-logo-light.jpg" alt="" width="152" height="38" />
         </picture>
         <span class="badge">Impressum</span>
       </a>
