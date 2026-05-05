@@ -59,15 +59,15 @@
     "name": "BriefPro",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "Web",
-    "description": "Arztbrief Software für deutsche Kliniken: Voice-first Ambient Dictation, KI-gestütztes Clinical Reasoning, Rollenfreigabe und direkter Export. DSGVO-konform.",
+    "description": "Medical letter software for German clinics: Voice-first Ambient Dictation, AI-assisted Clinical Reasoning, role-based approval and direct export. GDPR-compliant.",
     "url": "https://briefpro.de",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "EUR",
-      "description": "Pilot-Phase — Preise individuell"
+      "description": "Pilot Phase — individual pricing"
     },
-    "featureList": ["Voice-first Spracherkennung", "12-Sektionen Arztbrief-Entwurf", "Rollenbasierte Freigabe", "Audit-Trail", "PDF/HL7 Export", "DSGVO-konform"]
+    "featureList": ["Voice-first speech recognition", "12-section medical letter draft", "Role-based approval", "Audit-Trail", "PDF/HL7 Export", "GDPR-compliant"]
   }
 </script>
 </head>
@@ -150,8 +150,8 @@
           <div class="device-dots" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="device-tabs">
             <span class="device-tab is-active">Recording</span>
-            <span class="device-tab">Entwurf</span>
-            <span class="device-tab">Freigabe</span>
+            <span class="device-tab">Draft</span>
+            <span class="device-tab">Approval</span>
           </div>
           <div class="device-status"><span class="status-pulse"></span>app.briefpro.de</div>
         </div>
@@ -166,7 +166,7 @@
                 </div>
                 <div class="record-encounter">
                   <span class="record-label">Encounter</span>
-                  <strong>Vorläufige Entlassung · Kardiologie</strong>
+                  <strong>Preliminary Discharge · Cardiology</strong>
                 </div>
               </div>
               <div class="record-timer"><span class="record-dot"></span>02:34</div>
@@ -180,10 +180,10 @@
               <span></span><span></span><span></span><span></span><span></span>
             </div>
             <div class="transcript-strip">
-              <span class="ts-line">„… retrosternale Schmerzen seit zwei Stunden, Ausstrahlung in den linken Arm…"</span>
+              <span class="ts-line">"… retrosternal pain for two hours, radiating to the left arm…"</span>
             </div>
             <div class="record-progress">
-              <span>3 von 12 Sektionen erfasst</span>
+              <span>3 of 12 sections captured</span>
               <div class="progress-track"><div class="progress-fill" style="--p:25%"></div></div>
             </div>
           </div>
@@ -193,28 +193,28 @@
             <div class="draft-section">
               <div class="draft-section-head">
                 <span class="draft-num">04</span>
-                <span class="draft-title">Anamnese</span>
-                <span class="draft-pill draft-pill-new">KI‑Vorschlag</span>
+                <span class="draft-title">History</span>
+                <span class="draft-pill draft-pill-new">AI Suggestion</span>
               </div>
               <p class="draft-text">
-                Der Patient stellte sich mit seit zwei Stunden bestehenden
-                <mark class="hl-add">retrosternalen Schmerzen mit Ausstrahlung in den linken Arm</mark>
-                vor. Vorerkrankungen: arterielle Hypertonie, bekannte KHK.
+                The patient presented with
+                <mark class="hl-add">retrosternal pain radiating to the left arm</mark>
+                lasting two hours. Pre-existing conditions: arterial hypertension, known CAD.
               </p>
             </div>
             <div class="diff-card">
-              <div class="diff-old">– Schmerzen seit 2h, keine Ausstrahlung</div>
-              <div class="diff-new">+ Schmerzen seit 2h, Ausstrahlung in den linken Arm</div>
+              <div class="diff-old">– Pain for 2h, no radiation</div>
+              <div class="diff-new">+ Pain for 2h, radiating to left arm</div>
               <div class="diff-actions">
-                <span class="chip chip-accept">Akzeptieren</span>
-                <span class="chip chip-reject">Ablehnen</span>
+                <span class="chip chip-accept">Accept</span>
+                <span class="chip chip-reject">Reject</span>
               </div>
             </div>
             <div class="draft-section draft-section-muted">
               <div class="draft-section-head">
                 <span class="draft-num">07</span>
-                <span class="draft-title">Verlauf</span>
-                <span class="draft-pill">Vorschlag in Arbeit</span>
+                <span class="draft-title">Course</span>
+                <span class="draft-pill">Suggestion in progress</span>
               </div>
               <div class="skeleton-line"></div>
               <div class="skeleton-line w70"></div>
@@ -226,15 +226,15 @@
             <div class="approve-status">
               <div class="approve-status-row">
                 <span class="approve-step is-done">
-                  <span class="step-dot"></span> Entwurf
+                  <span class="step-dot"></span> Draft
                 </span>
                 <span class="approve-line is-done"></span>
                 <span class="approve-step is-done">
-                  <span class="step-dot"></span> Assistenzarzt
+                  <span class="step-dot"></span> Resident
                 </span>
                 <span class="approve-line is-active"></span>
                 <span class="approve-step is-active">
-                  <span class="step-dot"></span> Oberarzt
+                  <span class="step-dot"></span> Attending
                 </span>
                 <span class="approve-line"></span>
                 <span class="approve-step">
@@ -247,27 +247,27 @@
                 <svg viewBox="0 0 16 16" width="12" height="12"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="validation-body">
-                <strong>Medizinische Validierung bestanden</strong>
-                <span>Keine kritischen Wechselwirkungen, Allergien dokumentiert.</span>
+                <strong>Medical validation passed</strong>
+                <span>No critical interactions, allergies documented.</span>
               </div>
             </div>
             <div class="audit-list">
-              <div class="audit-row"><span class="audit-time">14:02</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">Anamnese geändert</span></div>
-              <div class="audit-row"><span class="audit-time">14:08</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">zur Freigabe gestellt</span></div>
-              <div class="audit-row audit-pending"><span class="audit-time">·</span><span class="audit-actor">Prof. Dr. K. Weber</span><span class="audit-act">Oberarzt-Freigabe ausstehend</span></div>
+              <div class="audit-row"><span class="audit-time">14:02</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">History changed</span></div>
+              <div class="audit-row"><span class="audit-time">14:08</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">Submitted for approval</span></div>
+              <div class="audit-row audit-pending"><span class="audit-time">·</span><span class="audit-actor">Prof. Dr. K. Weber</span><span class="audit-act">Attending approval pending</span></div>
             </div>
             <div class="export-row">
-              <span class="export-btn">PDF exportieren</span>
-              <span class="export-btn export-btn-ghost">Kopieren</span>
-              <span class="export-btn export-btn-ghost">HL7 Senden</span>
+              <span class="export-btn">Export PDF</span>
+              <span class="export-btn export-btn-ghost">Copy</span>
+              <span class="export-btn export-btn-ghost">Send HL7</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="stage-nav" role="tablist" aria-label="Workflow-Schritt">
-        <button type="button" class="stage-nav-btn is-active" data-stage="0" role="tab"><span class="stage-nav-num">01</span> Aufnehmen</button>
-        <button type="button" class="stage-nav-btn" data-stage="1" role="tab"><span class="stage-nav-num">02</span> Entwerfen</button>
-        <button type="button" class="stage-nav-btn" data-stage="2" role="tab"><span class="stage-nav-num">03</span> Freigeben</button>
+      <div class="stage-nav" role="tablist" aria-label="Workflow step">
+        <button type="button" class="stage-nav-btn is-active" data-stage="0" role="tab"><span class="stage-nav-num">01</span> Record</button>
+        <button type="button" class="stage-nav-btn" data-stage="1" role="tab"><span class="stage-nav-num">02</span> Draft</button>
+        <button type="button" class="stage-nav-btn" data-stage="2" role="tab"><span class="stage-nav-num">03</span> Approve</button>
       </div>
     </aside>
   </div>
@@ -277,25 +277,25 @@
 <section class="problem">
   <div class="container">
     <div class="problem-grid">
-      <p class="problem-eyebrow">Das Problem</p>
+      <p class="problem-eyebrow">The Problem</p>
       <p class="problem-statement">
-        Eine 24‑Stunden‑Schicht endet selten um 24 Uhr.
-        Nach Visiten, Notfällen und OPs warten noch
-        <span class="problem-highlight">3 bis 5 Stunden Arztbriefe</span> —
-        oft am Wochenende, oft unbezahlt, immer ohne klare Verantwortungsübergabe.
+        A 24‑hour shift rarely ends at 24:00.
+        After rounds, emergencies, and surgeries, there are still
+        <span class="problem-highlight">3 to 5 hours of medical letters</span> —
+        often on weekends, often unpaid, always without clear responsibility handover.
       </p>
       <div class="problem-stats">
         <div class="problem-stat">
           <div class="stat-num"><span class="stat-num-value" data-count="3">3</span><span class="stat-num-unit">h+</span></div>
-          <div class="stat-label">tägliche Doku-Last nach der Schicht</div>
+          <div class="stat-label">daily documentation load after shift</div>
         </div>
         <div class="problem-stat">
           <div class="stat-num"><span class="stat-num-value" data-count="60">60</span><span class="stat-num-unit">%</span></div>
-          <div class="stat-label">der Ärzte berichten Burnout-Symptome</div>
+          <div class="stat-label">of physicians report burnout symptoms</div>
         </div>
         <div class="problem-stat">
           <div class="stat-num"><span class="stat-num-value" data-count="0">0</span></div>
-          <div class="stat-label">generischer Ambient-Scribes mit echtem DE-Brief-Workflow</div>
+          <div class="stat-label">generic Ambient Scribes with real German letter workflow</div>
         </div>
       </div>
     </div>
@@ -308,38 +308,38 @@
     <div id="paediatrie-proof" style="display:none"></div>
     <div id="pediatric-proof" style="display:none"></div>
     <div class="section-head">
-      <p class="section-eyebrow">So funktioniert es</p>
-      <h2 class="section-title">Drei Schritte. Eine Verantwortungskette.</h2>
-      <p class="section-sub">Kein Autopilot. Kein Black‑Box‑Output. Jeder Übergang ist sichtbar, jede Änderung nachvollziehbar.</p>
+      <p class="section-eyebrow">How It Works</p>
+      <h2 class="section-title">Three Steps. One Responsibility Chain.</h2>
+      <p class="section-sub">No autopilot. No black‑box output. Every transition is visible, every change traceable.</p>
     </div>
     <div class="walk-grid">
       <article class="walk-card">
         <span class="walk-num">01</span>
-        <h3 class="walk-title">Aufnehmen</h3>
-        <p class="walk-text">Sprechen Sie wie im Stationsalltag. BriefPro transkribiert auf Deutsch, optional mit Speaker‑Trennung. Audio wird nach der Transkription verworfen.</p>
+        <h3 class="walk-title">Record</h3>
+        <p class="walk-text">Speak as you would on rounds. BriefPro transcribes in German, optionally with speaker separation. Audio is discarded after transcription.</p>
         <ul class="walk-list">
-          <li>Voice‑first, ohne Vorlagen lernen</li>
-          <li>Patient + Encounter‑Kontext</li>
-          <li>Audio nicht persistent</li>
+          <li>Voice‑first, no template learning</li>
+          <li>Patient + Encounter context</li>
+          <li>Audio not persistent</li>
         </ul>
       </article>
       <article class="walk-card walk-card-mid">
         <span class="walk-num">02</span>
-        <h3 class="walk-title">Entwerfen</h3>
-        <p class="walk-text">12‑Sektionen‑Standard mit dynamischen Templates. KI schlägt vor, markiert fehlende Daten als <code class="inline-code">[?]</code> statt zu erfinden.</p>
+        <h3 class="walk-title">Draft</h3>
+        <p class="walk-text">12‑section standard with dynamic templates. AI suggests, marks missing data as <code class="inline-code">[?]</code> instead of inventing.</p>
         <ul class="walk-list">
-          <li>Pädiatrie / Erwachsenen automatisch</li>
-          <li>Diff‑basiertes Review pro Abschnitt</li>
-          <li>Akzeptieren · Ablehnen · Bearbeiten</li>
+          <li>Pediatrics / Adults automatic</li>
+          <li>Diff‑based review per section</li>
+          <li>Accept · Reject · Edit</li>
         </ul>
       </article>
       <article class="walk-card">
         <span class="walk-num">03</span>
-        <h3 class="walk-title">Freigeben</h3>
-        <p class="walk-text">Statusfluss Assistenzarzt → Oberarzt → Final. Nur freigegebene Inhalte verlassen den Workflow. Vollständiger Audit‑Trail.</p>
+        <h3 class="walk-title">Approve</h3>
+        <p class="walk-text">Status flow Resident → Attending → Final. Only approved content leaves the workflow. Complete audit trail.</p>
         <ul class="walk-list">
-          <li>Rollenbasierte Approval‑Gates</li>
-          <li>Wer · was · wann pro Sektion</li>
+          <li>Role‑based Approval‑Gates</li>
+          <li>Who · what · when per section</li>
           <li>Export PDF / HL7 / Copy</li>
         </ul>
       </article>
@@ -352,14 +352,14 @@
   <div class="container">
     <blockquote class="editorial-quote">
       <p>
-        „Wir wollten kein weiteres Diktiergerät und keinen Autopiloten,
-        der heimlich Diagnosen umschreibt. Wir wollten ein Werkzeug, das
-        <span class="editorial-emph">die Verantwortungskette unserer Klinik abbildet</span> —
-        Assistenzarzt, Oberarzt, Freigabe. Genau das macht BriefPro."
+        "We didn't want another dictation device or an autopilot
+        that secretly rewrites diagnoses. We wanted a tool that
+        <span class="editorial-emph">reflects our clinic's responsibility chain</span> —
+        Resident, Attending, Approval. That's exactly what BriefPro does."
       </p>
       <footer class="editorial-meta">
         <span class="editorial-line"></span>
-        <span>Klinische Leitidee · Dr. A. Castro Martinez, Gründer</span>
+        <span>Clinical Vision · Dr. A. Castro Martinez, Founder</span>
       </footer>
     </blockquote>
   </div>
@@ -371,21 +371,21 @@
     <div id="warum-briefpro" style="display:none"></div>
     <div id="why-briefpro" style="display:none"></div>
     <div class="section-head">
-      <p class="section-eyebrow">Warum BriefPro</p>
-      <h2 class="section-title">Generische Ambient‑Scribes hören zu.<br /><span class="section-title-emph">BriefPro übergibt Verantwortung.</span></h2>
+      <p class="section-eyebrow">Why BriefPro</p>
+      <h2 class="section-title">Generic Ambient Scribes listen.<br /><span class="section-title-emph">BriefPro transfers responsibility.</span></h2>
     </div>
     <div class="compare">
       <div class="compare-col compare-col-other">
         <div class="compare-head">
-          <span class="compare-label">Generischer AI‑Scribe</span>
+          <span class="compare-label">Generic AI Scribe</span>
         </div>
         <ul class="compare-list">
-          <li><span class="compare-x" aria-hidden="true">×</span> Gesprächsnotiz statt strukturiertem Brief</li>
-          <li><span class="compare-x" aria-hidden="true">×</span> Eine Person, ein Output — keine Rollentrennung</li>
-          <li><span class="compare-x" aria-hidden="true">×</span> Audit nur auf Session‑Ebene</li>
-          <li><span class="compare-x" aria-hidden="true">×</span> US‑Fokus, deutsche Brief‑Struktur ist Beiwerk</li>
-          <li><span class="compare-x" aria-hidden="true">×</span> Erfindet fehlende Details (Halluzination)</li>
-          <li><span class="compare-x" aria-hidden="true">×</span> Tiefe EHR‑Integration als Eintrittsbarriere</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Conversation note instead of structured letter</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> One person, one output — no role separation</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Audit only at session level</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> US‑focus, German letter structure is an afterthought</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Invents missing details (hallucination)</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Deep EHR integration as entry barrier</li>
         </ul>
       </div>
       <div class="compare-col compare-col-us">
@@ -396,12 +396,12 @@
           <span class="compare-label">BriefPro</span>
         </div>
         <ul class="compare-list">
-          <li><span class="compare-check" aria-hidden="true">✓</span> 12‑Sektionen Standard mit pädiatrischen Templates</li>
-          <li><span class="compare-check" aria-hidden="true">✓</span> Assistenzarzt → Oberarzt → Final als Pflichtfluss</li>
-          <li><span class="compare-check" aria-hidden="true">✓</span> Sektionsbezogener Audit‑Trail (wer, was, wann)</li>
-          <li><span class="compare-check" aria-hidden="true">✓</span> In Berlin gebaut, für deutsche Klinikrealität</li>
-          <li><span class="compare-check" aria-hidden="true">✓</span> Fehlende Daten transparent als <code class="inline-code">[?]</code></li>
-          <li><span class="compare-check" aria-hidden="true">✓</span> Export‑first: Pilot ohne EHR‑Eingriff startbar</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> 12‑section standard with pediatric templates</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Resident → Attending → Final as mandatory flow</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Section‑specific audit trail (who, what, when)</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Built in Berlin, for German clinic reality</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Missing data transparent as <code class="inline-code">[?]</code></li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Export‑first: Pilot startable without EHR intervention</li>
         </ul>
       </div>
     </div>
@@ -414,42 +414,42 @@
     <div id="freigabe-lanes" style="display:none"></div>
     <div id="approval-lanes" style="display:none"></div>
     <div class="section-head">
-      <p class="section-eyebrow">Im Brief</p>
-      <h2 class="section-title">Was die Rollenfreigabe wirklich bedeutet.</h2>
-      <p class="section-sub">Drei Lanes, ein klarer Statusfluss, keine Umgehung. So sieht klinische Verantwortung in Software aus.</p>
+      <p class="section-eyebrow">In the Letter</p>
+      <h2 class="section-title">What role‑based approval really means.</h2>
+      <p class="section-sub">Three lanes, clear status flow, no bypass. This is clinical responsibility in software.</p>
     </div>
     <div class="lanes">
       <div class="lane">
         <div class="lane-head">
           <span class="lane-num">Lane 1</span>
-          <h3>Assistenzarzt</h3>
+          <h3>Resident</h3>
         </div>
-        <p class="lane-text">Erstellt den Erstentwurf, ergänzt klinische Details aus der Visite, übergibt zur Fachfreigabe.</p>
+        <p class="lane-text">Creates the initial draft, adds clinical details from rounds, submits for specialist approval.</p>
         <div class="lane-status lane-status-draft">
           <span class="lane-status-dot"></span>
-          <span>Entwurf · 8 von 12 Sektionen</span>
+          <span>Draft · 8 of 12 sections</span>
         </div>
       </div>
       <div class="lane lane-mid">
         <div class="lane-head">
           <span class="lane-num">Lane 2</span>
-          <h3>Facharzt</h3>
+          <h3>Specialist</h3>
         </div>
-        <p class="lane-text">Prüft Vollständigkeit, Konsistenz und medizinische Sicherheit. Akzeptiert oder fordert Korrektur.</p>
+        <p class="lane-text">Checks completeness, consistency, and medical safety. Accepts or requests correction.</p>
         <div class="lane-status lane-status-review">
           <span class="lane-status-dot"></span>
-          <span>In Review · 2 Hinweise</span>
+          <span>In Review · 2 notes</span>
         </div>
       </div>
       <div class="lane">
         <div class="lane-head">
           <span class="lane-num">Lane 3</span>
-          <h3>Oberarzt &amp; Final</h3>
+          <h3>Attending &amp; Final</h3>
         </div>
-        <p class="lane-text">Finale Signatur. Nur freigegebene Inhalte verlassen den Workflow — Export mit dokumentierter Historie.</p>
+        <p class="lane-text">Final signature. Only approved content leaves the workflow — export with documented history.</p>
         <div class="lane-status lane-status-final">
           <span class="lane-status-dot"></span>
-          <span>Bereit zum Export</span>
+          <span>Ready for export</span>
         </div>
       </div>
     </div>
@@ -461,48 +461,48 @@
   <div class="container">
     <div id="compliance-roadmap" style="display:none"></div>
     <div class="section-head">
-      <p class="section-eyebrow">Sicherheit &amp; Compliance</p>
-      <h2 class="section-title">Für deutsches Procurement, IT und Datenschutz gebaut.</h2>
+      <p class="section-eyebrow">Security &amp; Compliance</p>
+      <h2 class="section-title">Built for German procurement, IT and data protection.</h2>
     </div>
     <div class="trust-grid">
       <article class="trust-card">
         <div class="trust-card-icon">
           <svg viewBox="0 0 32 32" width="22" height="22"><path d="M16 4 6 8v8c0 6 4 10 10 12 6-2 10-6 10-12V8L16 4z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><path d="M11 16l3.5 3.5L21 13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>DSGVO &amp; EU‑Hosting</h3>
-        <p>Datensparsamkeit, Datenschutzunterlagen, Hosting in Deutschland. Audio nicht persistent.</p>
+        <h3>GDPR &amp; EU‑Hosting</h3>
+        <p>Data minimization, compliance documentation, hosting in Germany. Audio not persistent.</p>
       </article>
       <article class="trust-card">
         <div class="trust-card-icon">
           <svg viewBox="0 0 32 32" width="22" height="22"><rect x="6" y="8" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11 14h10M11 18h10M11 22h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="22" cy="8" r="3" fill="currentColor"/></svg>
         </div>
-        <h3>Audit‑Trail pro Sektion</h3>
-        <p>Jede Änderung mit Akteur, Zeit und Diff. Approval‑Gates lassen sich nicht umgehen.</p>
+        <h3>Audit‑Trail per Section</h3>
+        <p>Every change with actor, time and diff. Approval‑Gates cannot be bypassed.</p>
       </article>
       <article class="trust-card">
         <div class="trust-card-icon">
           <svg viewBox="0 0 32 32" width="22" height="22"><circle cx="11" cy="13" r="3.5" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="21" cy="13" r="3.5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M5 26c1-4 3.5-5.5 6-5.5s5 1.5 6 5.5M15 26c1-4 3.5-5.5 6-5.5s5 1.5 6 5.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
         </div>
-        <h3>Rollenbasierte Freigabe</h3>
-        <p>Assistenzarzt → Oberarzt → Final. Keine stille KI‑Änderung, keine Schatten‑Freigabe.</p>
+        <h3>Role‑Based Approval</h3>
+        <p>Resident → Attending → Final. No silent AI changes, no shadow approvals.</p>
       </article>
       <article class="trust-card">
         <div class="trust-card-icon">
           <svg viewBox="0 0 32 32" width="22" height="22"><path d="M6 16h6l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Export‑first Integration</h3>
-        <p>Pilot ohne KIS‑Eingriff. Spätere HL7 v2 / FHIR / ORBIS / SAP IS‑H als Stufenplan.</p>
+        <h3>Export‑First Integration</h3>
+        <p>Pilot without KIS intervention. Later HL7 v2 / FHIR / ORBIS / SAP IS‑H as phased plan.</p>
       </article>
     </div>
     <div class="cert-strip">
-      <div class="cert-strip-head">Zertifizierungs‑Roadmap</div>
+      <div class="cert-strip-head">Certification Roadmap</div>
       <div class="cert-strip-grid">
-        <div class="cert"><span class="cert-status cert-status-progress">In Arbeit</span><span class="cert-name">DSGVO‑Konformität</span></div>
-        <div class="cert"><span class="cert-status cert-status-progress">In Arbeit</span><span class="cert-name">ISO 27001</span></div>
+        <div class="cert"><span class="cert-status cert-status-progress">In Progress</span><span class="cert-name">GDPR Compliance</span></div>
+        <div class="cert"><span class="cert-status cert-status-progress">In Progress</span><span class="cert-name">ISO 27001</span></div>
         <div class="cert"><span class="cert-status cert-status-roadmap">Roadmap</span><span class="cert-name">ISO 13485</span></div>
         <div class="cert"><span class="cert-status cert-status-roadmap">Roadmap</span><span class="cert-name">EU MDR</span></div>
       </div>
-      <p class="cert-note">Wir machen keine Zertifizierungs‑Versprechen — nur überprüfbare Schritte. Detaillierte Compliance‑Unterlagen im Procurement‑Gespräch.</p>
+      <p class="cert-note">We make no certification promises — only verifiable steps. Detailed compliance documentation in procurement discussion.</p>
     </div>
   </div>
 </section>
@@ -519,21 +519,21 @@
       </div>
     </div>
     <div class="founder-copy">
-      <p class="section-eyebrow">Gründer</p>
+      <p class="section-eyebrow">Founder</p>
       <h2 class="founder-name"><span class="serif-emph">Dr. Angel Mario</span> Castro Martinez</h2>
       <p class="founder-role">Founder &amp; Product Engineer · Berlin</p>
       <p class="founder-text">
-        PhD in Neurosensory Science (Universität Oldenburg). Über zehn Jahre in skalierbaren
-        Sprach‑ und KI‑Systemen — vorher Deutsche Telekom IT, Amazon. BriefPro entstand
-        aus der Beobachtung, dass Ärzte in seinem Umfeld nach 24‑Stunden‑Schichten
-        noch stundenlang dokumentierten.
+        PhD in Neurosensory Science (University of Oldenburg). Over ten years in scalable
+        speech and AI systems — previously Deutsche Telekom IT, Amazon. BriefPro emerged
+        from observing that physicians in his circle were still documenting for hours
+        after 24‑hour shifts.
       </p>
       <p class="founder-quote">
-        „Wenn wir die Doku‑Zeit halbieren, entsteht wieder Raum für echte Patientenversorgung.
-        Aber nicht durch mehr KI — durch bessere Verantwortungsübergaben."
+        "If we halve documentation time, we create space again for genuine patient care.
+        But not through more AI — through better responsibility handovers."
       </p>
       <a class="text-link" href="https://www.linkedin.com/in/angelcastrom" target="_blank" rel="noopener noreferrer">
-        LinkedIn ansehen
+        View LinkedIn
         <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -545,30 +545,30 @@
   <div class="container">
     <div class="section-head">
       <p class="section-eyebrow">Pilot</p>
-      <h2 class="section-title">Ein Pilot. Klare Schritte. Keine Lizenz‑Akrobatik.</h2>
-      <p class="section-sub">Pilotpreise werden nach Setup und Anforderung individuell finalisiert. Hier ist, wie wir typischerweise starten.</p>
+      <h2 class="section-title">One Pilot. Clear Steps. No License Acrobatics.</h2>
+      <p class="section-sub">Pilot pricing is finalized individually after setup and requirements. Here's how we typically start.</p>
     </div>
     <div class="pilot-grid">
       <div class="pilot-step">
         <div class="pilot-step-num">01</div>
         <h3>Discovery · 30 Min</h3>
-        <p>Workflow, Volumen, Datenschutz‑Anforderungen. Wir bringen den Pilot‑Pack für IT &amp; Einkauf mit.</p>
+        <p>Workflow, volume, data protection requirements. We bring the pilot pack for IT &amp; procurement.</p>
       </div>
       <div class="pilot-step">
         <div class="pilot-step-num">02</div>
-        <h3>Setup · 2–5 Tage</h3>
-        <p>Klinik‑Account, Rollenmodell (Assistenz‑/Oberarzt), Testpatienten. Kein KIS‑Eingriff nötig.</p>
+        <h3>Setup · 2–5 Days</h3>
+        <p>Clinic account, role model (Resident/Attending), test patients. No KIS intervention needed.</p>
       </div>
       <div class="pilot-step">
         <div class="pilot-step-num">03</div>
-        <h3>Pilot · 4–8 Wochen</h3>
-        <p>Eine Abteilung, klare Erfolgskriterien (Doku‑Zeit, Freigabe‑Latenz). Audit‑Daten gehören Ihnen.</p>
+        <h3>Pilot · 4–8 Weeks</h3>
+        <p>One department, clear success criteria (documentation time, approval latency). Audit data belongs to you.</p>
       </div>
       <div class="pilot-step pilot-step-cta">
-        <h3>Bereit?</h3>
-        <p>Wir blocken eine Stunde, Sie bringen einen typischen Brief. Wir zeigen den vollen Workflow live — kein generisches Demo‑Deck.</p>
+        <h3>Ready?</h3>
+        <p>We block an hour, you bring a typical letter. We show the full workflow live — no generic demo deck.</p>
         <a class="btn btn-primary" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="pilot-card">
-          Klinik‑Demo buchen
+          Book Clinic Demo
         </a>
       </div>
     </div>
@@ -580,32 +580,32 @@
   <div class="container faq-grid">
     <div class="faq-head">
       <p class="section-eyebrow">FAQ</p>
-      <h2 class="section-title">Was Procurement, IT und Fachärzte fragen.</h2>
+      <h2 class="section-title">What procurement, IT and specialists ask.</h2>
     </div>
     <div class="faq-list">
       <details class="faq-item">
-        <summary>Ersetzt BriefPro ärztliche Entscheidungen?<span class="faq-icon" aria-hidden="true"></span></summary>
-        <p>Nein. BriefPro ist Dokumentationsunterstützung. Es trifft keine autonomen Diagnose‑ oder Therapieentscheidungen. Medizinische Verantwortung und finale Freigabe bleiben immer beim klinischen Team.</p>
+        <summary>Does BriefPro replace medical decisions?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>No. BriefPro is documentation support. It makes no autonomous diagnostic or therapeutic decisions. Medical responsibility and final approval always remain with the clinical team.</p>
       </details>
       <details class="faq-item">
-        <summary>Schreibt BriefPro automatisch in andere Systeme zurück?<span class="faq-icon" aria-hidden="true"></span></summary>
-        <p>Nein, nicht autonom. Exporte werden explizit ausgelöst. Pilote starten typischerweise export‑first; HL7 / FHIR / KIS‑Connectoren folgen stufenweise.</p>
+        <summary>Does BriefPro automatically write back to other systems?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>No, not autonomously. Exports are triggered explicitly. Pilots typically start export‑first; HL7 / FHIR / KIS connectors follow in phases.</p>
       </details>
       <details class="faq-item">
-        <summary>Wie schnell ist ein Pilot startbar?</summary>
-        <p>Typisch innerhalb weniger Tage, ohne tiefe KIS‑Integration. Eine Abteilung, klare Erfolgskriterien, 4–8 Wochen Laufzeit.</p>
+        <summary>How fast can a pilot start?</summary>
+        <p>Typically within a few days, without deep KIS integration. One department, clear success criteria, 4–8 weeks duration.</p>
       </details>
       <details class="faq-item">
-        <summary>Welche Daten verlassen das System?</summary>
-        <p>Audio wird nach Transkription verworfen (Standard). Transkripte und Briefe verschlüsselt in der EU. Keine Weitergabe an Dritte ohne explizite Zustimmung.</p>
+        <summary>What data leaves the system?</summary>
+        <p>Audio is discarded after transcription (standard). Transcripts and letters encrypted in the EU. No sharing with third parties without explicit consent.</p>
       </details>
       <details class="faq-item">
-        <summary>Pädiatrie‑Unterstützung?</summary>
-        <p>Ja. Pädiatrischer Intake mit Pflichtfeldern (Perzentile, Impfstatus), altersgerechte Templates, Guardrails gegen unvollständige Briefe.</p>
+        <summary>Pediatrics support?</summary>
+        <p>Yes. Pediatric intake with required fields (percentiles, vaccination status), age‑appropriate templates, guardrails against incomplete letters.</p>
       </details>
       <details class="faq-item">
-        <summary>Was kostet der Pilot?</summary>
-        <p>Pilotpreise werden individuell nach Klinikgröße, Abteilungsumfang und Integrationsbedarf finalisiert. Erwartet keine Versteckspielchen — wir sind transparent im Discovery‑Gespräch.</p>
+        <summary>What does the pilot cost?</summary>
+        <p>Pilot pricing is finalized individually based on clinic size, department scope, and integration needs. Expect no hidden games — we are transparent in the discovery discussion.</p>
       </details>
     </div>
   </div>
@@ -616,12 +616,12 @@
 <section class="final-cta">
   <div class="container final-cta-inner">
     <div class="final-cta-copy">
-      <h2 class="final-cta-title">Geben Sie Ihren Ärzten den Abend zurück.</h2>
-      <p class="final-cta-sub">30 Minuten. Ein typischer Brief. Wir zeigen Ihnen den vollen Workflow live — vom Diktat bis zur Oberarzt‑Freigabe.</p>
+      <h2 class="final-cta-title">Give your physicians their evenings back.</h2>
+      <p class="final-cta-sub">30 minutes. A typical letter. We show you the full workflow live — from dictation to attending approval.</p>
     </div>
     <div class="final-cta-actions">
-      <a class="btn btn-primary btn-lg" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="final-primary">30‑Min Klinik‑Demo buchen</a>
-      <a class="btn btn-ghost btn-lg" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen" data-cta="final-secondary">pilot@briefpro.de</a>
+      <a class="btn btn-primary btn-lg" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="final-primary">Book 30‑Min Clinic Demo</a>
+      <a class="btn btn-ghost btn-lg" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20request" data-cta="final-secondary">pilot@briefpro.de</a>
     </div>
   </div>
 </section>
@@ -635,31 +635,31 @@
         <img src="/assets/logo.svg" alt="BriefPro Logo" width="34" height="34" class="brand-mark-img" />
         <span class="brand-word">BriefPro</span>
       </a>
-      <p class="footer-tag" data-i18n="footer.tag">Vom Diktat zum freigegebenen Arztbrief.<br/>Berlin, Deutschland.</p>
+      <p class="footer-tag" data-i18n="footer.tag">From dictation to approved medical letter.<br/>Berlin, Germany.</p>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
-        <span class="footer-col-head">Produkt</span>
+        <span class="footer-col-head">Product</span>
         <a href="#walkthrough">Workflow</a>
-        <a href="#unterschied">Warum BriefPro</a>
+        <a href="#unterschied">Why BriefPro</a>
         <a href="#preise">Pilot</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-head">Sicherheit</span>
+        <span class="footer-col-head">Security</span>
         <a href="#sicherheit">Compliance</a>
         <a href="#sicherheit">Audit-Trail</a>
         <a href="#sicherheit">Roadmap</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-head">Kontakt</span>
+        <span class="footer-col-head">Contact</span>
         <a href="mailto:pilot@briefpro.de">pilot@briefpro.de</a>
         <a href="https://app.briefpro.de" rel="noopener">App Login</a>
         <a href="https://www.linkedin.com/in/angelcastrom" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <div class="footer-col">
-        <span class="footer-col-head">Rechtliches</span>
-        <a href="/impressum.html">Impressum</a>
-        <a href="/privacy.html">Datenschutz</a>
+        <span class="footer-col-head">Legal</span>
+        <a href="/impressum.html">Imprint</a>
+        <a href="/privacy.html">Privacy</a>
       </div>
     </div>
   </div>

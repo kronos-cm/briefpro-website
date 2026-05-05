@@ -58,6 +58,7 @@ button{font-family:inherit}
   padding:0 28px;box-sizing:border-box;
 }
 @media (max-width:640px){.container{padding:0 12px;box-sizing:border-box}}
+@media (max-width:640px){.nav-row{gap:16px;padding:18px 12px}.brand{margin-right:8px}}
 
 /* ============== TYPE ============== */
 .display{
