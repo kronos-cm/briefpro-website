@@ -1,837 +1,765 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BriefPro — Medical letters in minutes. Voice-first. Safe.</title>
-  <meta name="description" content="BriefPro — medical letter software (Arztbrief Software) for German clinics. Voice-first ambient dictation, AI-powered clinical reasoning, role-based approvals, and instant export. GDPR-compliant medical documentation with full audit trail." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://briefpro.de/en/" />
-  <link rel="alternate" href="https://briefpro.de/" hreflang="de" />
-  <link rel="alternate" href="https://briefpro.de/en/" hreflang="en" />
-  <link rel="alternate" href="https://briefpro.de/" hreflang="x-default" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
-  <link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
-  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)" />
-  <link rel="icon" href="/assets/favicon-32-dark.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0284c7" />
-  <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/styles.css" />
-  <meta property="og:title" content="BriefPro — Medical letters in minutes" />
-  <meta property="og:description" content="Voice-first. Review-first. Built for Germany." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://briefpro.de/en/" />
-  <meta property="og:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BriefPro — Medical letters in minutes" />
-  <meta name="twitter:description" content="Voice-first. Review-first. Built for Germany." />
-  <meta name="twitter:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
-  <script defer data-domain="briefpro.de" src="https://plausible.io/js/script.js"></script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "BriefPro",
-      "url": "https://briefpro.de",
-      "logo": "https://briefpro.de/assets/briefpro-logo-light.jpg",
-      "sameAs": [
-        "https://app.briefpro.de",
-        "https://www.linkedin.com/in/angelcastrom"
-      ]
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "BriefPro",
-      "url": "https://briefpro.de",
-      "inLanguage": "en-US"
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "BriefPro",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "Web",
-      "description": "Medical letter software (Arztbrief Software) for German clinics: voice-first ambient dictation, AI-powered clinical reasoning, role-based approvals, and export. GDPR-compliant.",
-      "url": "https://briefpro.de",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "description": "Pilot phase — pricing individually"
-      },
-      "featureList": ["Voice-first speech recognition", "12-section medical letter drafting", "Role-based approvals", "Audit trail", "PDF/HL7 export", "GDPR-compliant"]
-    }
-  </script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BriefPro — From dictation to approved medical letters.</title>
+<meta name="description" content="BriefPro is the approval-safe medical letter assistant for German clinics. Voice-first, role-based approvals, audit trail. GDPR-compliant." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://briefpro.de/en/" />
+<link rel="alternate" href="https://briefpro.de/" hreflang="de" />
+<link rel="alternate" href="https://briefpro.de/en/" hreflang="en" />
+<link rel="alternate" href="https://briefpro.de/" hreflang="x-default" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="/assets/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: light)" />
+<link rel="icon" href="/assets/favicon-32-dark.png" sizes="32x32" type="image/png" media="(prefers-color-scheme: dark)" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0A1628" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+<meta property="og:title" content="BriefPro — From dictation to approved medical letters" />
+<meta property="og:description" content="BriefPro is the approval-safe medical letter assistant for German clinics. Voice-first, role-based approvals, audit trail. GDPR-compliant." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://briefpro.de/en/" />
+<meta property="og:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BriefPro — From dictation to approved medical letters" />
+<meta name="twitter:description" content="BriefPro is the approval-safe medical letter assistant for German clinics. Voice-first, role-based approvals, audit trail. GDPR-compliant." />
+<meta name="twitter:image" content="https://briefpro.de/assets/proof-letter-chat-light.png" />
+<script defer data-domain="briefpro.de" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BriefPro",
+    "url": "https://briefpro.de",
+    "logo": "https://briefpro.de/assets/briefpro-logo-light.jpg",
+    "sameAs": [
+      "https://app.briefpro.de",
+      "https://www.linkedin.com/in/angelcastrom"
+    ]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BriefPro",
+    "url": "https://briefpro.de",
+    "inLanguage": "en-US"
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BriefPro",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "description": "Arztbrief Software für deutsche Kliniken: Voice-first Ambient Dictation, KI-gestütztes Clinical Reasoning, Rollenfreigabe und direkter Export. DSGVO-konform.",
+    "url": "https://briefpro.de",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "description": "Pilot-Phase — Preise individuell"
+    },
+    "featureList": ["Voice-first Spracherkennung", "12-Sektionen Arztbrief-Entwurf", "Rollenbasierte Freigabe", "Audit-Trail", "PDF/HL7 Export", "DSGVO-konform"]
+  }
+</script>
 </head>
-<body>
-  <script>
-    if (location.hostname === 'www.briefpro.de') {
-      location.replace('https://briefpro.de' + location.pathname + location.search + location.hash);
-    }
-  </script>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="/en/" aria-label="BriefPro">
-        <span class="logo" aria-hidden="true">
-          <picture>
-            <source srcset="/assets/briefpro-logo-dark.webp" media="(prefers-color-scheme: dark)" type="image/webp">
-            <source srcset="/assets/briefpro-logo-dark.jpg" media="(prefers-color-scheme: dark)">
-            <source srcset="/assets/briefpro-logo-light.webp" type="image/webp">
-            <img src="/assets/briefpro-logo-light.jpg" alt="" width="152" height="38" />
-          </picture>
-        </span>
-        <span class="badge">EN · Overview</span>
-      </a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="this.closest('.nav').classList.toggle('nav-open');this.setAttribute('aria-expanded',this.closest('.nav').classList.contains('nav-open'))">☰</button>
-      <nav class="nav-links" aria-label="Navigation">
-        <a href="#product">Product</a>
-        <a href="#founder-story">Team + Story</a>
-        <a href="#resources">Resources</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-        <span class="lang" aria-label="Language">
-          <a href="/">DE</a>
-          <a href="/en/" aria-current="page">EN</a>
-        </span>
-      </nav>
+<body data-theme="navy-emerald">
+<script>
+  if (location.hostname === 'www.briefpro.de') {
+    location.replace('https://briefpro.de' + location.pathname + location.search + location.hash);
+  }
+</script>
+
+<header class="nav" id="nav">
+  <div class="container nav-row">
+    <a class="brand" href="#top" aria-label="BriefPro">
+      <img src="/assets/logo.svg" alt="BriefPro Logo" width="36" height="36" class="brand-mark-img" />
+      <span class="brand-word">BriefPro</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation">
+      <a href="#produkt">Product</a>
+      <a href="#unterschied">Why BriefPro</a>
+      <a href="#sicherheit">Security</a>
+      <a href="#preise">Pilot</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" onclick="window.location.href='/'">DE</button>
+        <button type="button" class="is-active" data-lang="en">EN</button>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="hero-nav">Book Demo</a>
     </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="h-eyebrow">
-            <span class="pill">Voice-first</span>
-            <span class="pill alt">Review & Audit</span>
-            <span class="pill">Germany-first</span>
-          </div>
-          <h1 class="h1">German medical letters in minutes.
-            <br />Voice-first workflow with clinical approvals.</h1>
-          <p class="sub">Voice in — structured medical letter out. 12 sections, role-based approvals, export. The clinical team stays in control.</p>
-          <div class="cta">
-            <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book live demo</a>
-            <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
-          </div>
-          <p class="note"><a class="text-link" href="#walkthrough">See 3-minute workflow →</a></p>
-          <p class="note">Default: no long-term audio retention. Transcripts + audit trail are persisted.</p>
-        </div>
-        <aside class="hero-visual" aria-label="Platform preview">
-          <div class="mock-ui hero-mock">
-            <div class="mock-ui-header">
-              <div class="mock-ui-dots"><span></span><span></span><span></span></div>
-              <span class="mock-ui-title">BriefPro · Recording</span>
-            </div>
-            <div class="mock-rec">
-              <div class="mock-rec-indicator"><span class="mock-rec-dot"></span> Recording…</div>
-              <div class="mock-rec-patient">Patient: Max Mustermann · Preliminary Discharge</div>
-              <div class="mock-wave-bars">
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-                <div class="mock-wave-bar"></div>
-              </div>
-              <div class="mock-rec-timer">02:34</div>
-              <div class="mock-progress">
-                <span>PROGRESS</span>
-                <div class="mock-progress-bar"><div class="mock-progress-fill" style="width:25%"></div></div>
-                <span>3/12</span>
-              </div>
-            </div>
-          </div>
-          <div class="hero-kpis">
-            <div class="hero-kpi"><span class="hero-kpi-icon">📝</span><strong>12</strong> Sections (DE)</div>
-            <div class="hero-kpi"><span class="hero-kpi-icon">✅</span><strong>Review</strong> always required</div>
-            <div class="hero-kpi"><span class="hero-kpi-icon">📤</span><strong>Export</strong> PDF / Copy / HL7</div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="trust-strip">
-      <div class="container">
-        <div class="trust-grid reveal" aria-label="Core signals for procurement and operations">
-          <a class="trust-chip" href="#proof"><span class="dot" aria-hidden="true"></span>Product in Action</a>
-          <a class="trust-chip" href="#approval-lanes"><span class="dot" aria-hidden="true"></span>Role-gated approvals</a>
-          <a class="trust-chip" href="#safety"><span class="dot" aria-hidden="true"></span>Audit trail & privacy</a>
-          <a class="trust-chip" href="#resources"><span class="dot" aria-hidden="true"></span>Pilot pack for IT/procurement</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="outcomes" class="section">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">🎯</span>Clinical outcomes this enables</h2>
-        <div class="grid3">
-          <div class="card">
-            <h3>Less documentation drag</h3>
-            <p>Voice capture plus structured drafting reduces manual rework in the medical-letter process.</p>
-          </div>
-          <div class="card">
-            <h3>Higher safety discipline</h3>
-            <p>Mandatory review and role-gated approvals before any letter is finalized.</p>
-          </div>
-          <div class="card">
-            <h3>Audit-ready process</h3>
-            <p>Section-level history keeps changes and approvals traceable (who changed what, and when).</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="walkthrough" class="section alt-bg">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">⚙️</span>Workflow in practice</h2>
-          <p class="sub">From consultation to approved output in a clear process with explicit clinical accountability.</p>
-        </div>
-        <div class="walkthrough-grid">
-          <a class="card walkthrough-card" href="#proof">
-            <span class="walkthrough-time">Step 1</span>
-            <h3>Consultation -> Transcript -> Draft</h3>
-            <p>BriefPro converts structured notes into a 12-section draft instead of disconnected free text.</p>
-          </a>
-          <a class="card walkthrough-card" href="#approval-lanes">
-            <span class="walkthrough-time">Step 2</span>
-            <h3>Approvals instead of autopilot</h3>
-            <p>The status flow keeps accountability explicit: draft, review, approval, and final handover.</p>
-          </a>
-          <a class="card walkthrough-card" href="#safety">
-            <span class="walkthrough-time">Step 3</span>
-            <h3>Auditability & privacy</h3>
-            <p>Traceability, mandatory review, and conservative audio policy make the workflow operationally reliable.</p>
-          </a>
-          <a class="card walkthrough-card" href="#contact">
-            <span class="walkthrough-time">Step 4</span>
-            <h3>Next step</h3>
-            <p>Start pilot with your current environment using export-first delivery, then expand integrations progressively.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="market-signals" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal">What we consistently hear in pilot calls</h2>
-          <p class="sub">Anonymized patterns from discovery and procurement conversations.</p>
-        </div>
-        <div class="social-grid">
-          <article class="card quote-card">
-            <p class="quote-role">Clinical team</p>
-            <p>"We need explicit review per section, not just a generated note."</p>
-          </article>
-          <article class="card quote-card">
-            <p class="quote-role">IT / integration</p>
-            <p>"Pilot must start without immediate write-back; otherwise adoption stalls."</p>
-          </article>
-          <article class="card quote-card">
-            <p class="quote-role">Security / procurement</p>
-            <p>"Show exactly who approved what and which compliance artifacts are available."</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="product" class="section">
-      <div class="container">
-        <div class="grid3">
-          <div class="card">
-            <h3>Voice-first workflow</h3>
-            <p>Capture the consult, transcribe fast, and structure immediately. AI follows the clinical process, not just the text.</p>
-          </div>
-          <div class="card">
-            <h3>Arztbrief-grade structure</h3>
-            <p>12‑section German standard with dynamic templates — e.g. pediatrics, cardiology, adult medicine.</p>
-          </div>
-          <div class="card">
-            <h3>Safe by approval</h3>
-            <p>Human‑in‑the‑loop instead of black‑box: preview, confirmation, full audit trail plus medical validation warnings.</p>
-          </div>
-        </div>
-        <div class="card feature-list">
-          <h3>What makes BriefPro different</h3>
-          <ul>
-            <li><strong>Natural commands:</strong> Structured edits (draft, add, correct) in real time.</li>
-            <li><strong>Context‑aware:</strong> Changes respect sections and roles, not just text.</li>
-            <li><strong>Medical validation:</strong> Multi‑step warnings for critical content before approval.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-briefpro" class="section alt-bg">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal">Why BriefPro vs generic ambient scribes?</h2>
-          <p class="sub">Beyond transcript capture, BriefPro ships a German letter workflow with explicit clinical accountability.</p>
-        </div>
-        <div class="comparison-grid">
-          <div class="card comparison-card">
-            <h3>Generic tools</h3>
-            <ul>
-              <li>Strong note capture, weaker full-letter workflow controls</li>
-              <li>Limited role-specific review transitions</li>
-              <li>Audit trails usually session-level, not section-level</li>
-            </ul>
-          </div>
-          <div class="card comparison-card briefpro">
-            <h3>BriefPro</h3>
-            <ul>
-              <li>12-section German medical-letter model with workflow logic</li>
-              <li>Role-based approvals (resident, attending/oberarzt)</li>
-              <li>Section-level traceability with explicit approval history</li>
-            </ul>
-          </div>
-        </div>
-        <div class="cta center">
-          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book live demo</a>
-          <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="proof" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">📸</span>Product in Action</h2>
-          <p class="sub">Interactive workflow: from consultation to approved discharge letter.</p>
-        </div>
-        <div class="sr-only" aria-hidden="true">
-          <img src="/assets/proof-letter-chat-light.png" alt="" />
-          <img src="/assets/proof-letter-chat-light-sections.png" alt="" />
-          <img src="/assets/proof-letter-chat-light-assistant.png" alt="" />
-        </div>
-        <div class="flow">
-          <div class="step">
-            <div class="tag">1</div>
-            <h4>Record</h4>
-            <p>Start/stop per patient & encounter.</p>
-          </div>
-          <div class="step">
-            <div class="tag">2</div>
-            <h4>Transcript</h4>
-            <p>German transcript (optional speaker separation).</p>
-          </div>
-          <div class="step">
-            <div class="tag">3</div>
-            <h4>Draft</h4>
-            <p>Structured 12-section draft + suggestions.</p>
-          </div>
-          <div class="step">
-            <div class="tag">4</div>
-            <h4>Review & Export</h4>
-            <p>Review changes, approve, export.</p>
-          </div>
-        </div>
-        <div class="proof-meta proof-meta-top">
-          <h3 id="proof-stage-title">12-Section Draft with Review Status</h3>
-          <p id="proof-stage-copy">From consultation to a structured draft with explicit review and role status.</p>
-          <div class="proof-controls">
-            <button type="button" class="btn ghost proof-nav" data-proof-nav="prev">Back</button>
-            <button type="button" class="btn secondary proof-nav" data-proof-nav="next">Next</button>
-          </div>
-        </div>
-        <div class="proof-thumb-grid" id="proof-thumb-grid">
-          <button type="button" class="proof-thumb is-active" data-proof-index="0">
-            <span class="proof-thumb-icon">📝</span>
-            <span><strong>Step 1 · Create</strong><span>Chat, suggestions & sections</span></span>
-          </button>
-          <button type="button" class="proof-thumb" data-proof-index="1">
-            <span class="proof-thumb-icon">💬</span>
-            <span><strong>Step 2 · Review</strong><span>Accept / reject changes</span></span>
-          </button>
-          <button type="button" class="proof-thumb" data-proof-index="2">
-            <span class="proof-thumb-icon">✅</span>
-            <span><strong>Step 3 · Approve</strong><span>Validation and export</span></span>
-          </button>
-        </div>
-        <div class="mock-ui" id="proof-showcase">
-          <div class="mock-ui-header">
-            <div class="mock-ui-dots"><span></span><span></span><span></span></div>
-            <span class="mock-ui-title">BriefPro — <span id="proof-stage-step">1/3</span></span>
-          </div>
-          <div class="mock-ui-body" id="mock-ui-body"></div>
-        </div>
-        <div class="cta center cta-mt">
-          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book Live Demo</a>
-          <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Request a pilot</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="approval-lanes" class="section accent-bg">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">✅</span>Approval lanes for clinical responsibility</h2>
-          <p class="sub">Clear status flow: draft -> resident approval -> attending/oberarzt approval -> final output.</p>
-        </div>
-        <div class="lane-grid">
-          <div class="card lane">
-            <span class="lane-tag">Lane 1</span>
-            <h3>Resident</h3>
-            <p>Builds the first draft and hands over a structured letter for specialist review.</p>
-          </div>
-          <div class="card lane">
-            <span class="lane-tag">Lane 2</span>
-            <h3>Attending / Oberarzt</h3>
-            <p>Validates completeness, consistency, and safety before final approval.</p>
-          </div>
-          <div class="card lane">
-            <span class="lane-tag">Lane 3</span>
-            <h3>Finalize & Export</h3>
-            <p>Only approved content leaves the workflow, with a documented history.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pediatric-proof" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title reveal">Pediatric workflow with a concrete demo case</h2>
-          <p class="sub">In 5 minutes: validated intake, pediatric-context drafting, and role-based approval before export.</p>
-        </div>
-        <div class="scenario-grid pediatric-grid">
-          <article class="card scenario">
-            <p class="scenario-label">Demo input (example)</p>
-            <p class="scenario-note">8-year-old patient with fever up to 39.2°C for 24h, cough, reduced oral intake. Weight 26 kg (~40th percentile), height 128 cm. Vaccination status age-appropriate per vaccination card. No meningeal signs, oxygen saturation 97%, moderately elevated CRP. Assessment: likely viral upper respiratory infection, symptomatic treatment, re-evaluation if worsening.</p>
-          </article>
-          <article class="card scenario">
-            <p class="scenario-label">What BriefPro makes visible</p>
-            <ul class="scenario-list">
-              <li>Pediatric intake with required fields (percentile, vaccination status) and validation.</li>
-              <li>Section generation with pediatric context instead of default adult phrasing.</li>
-              <li>Missing details are marked as <code>[?]</code> rather than fabricated.</li>
-              <li>Role-gated approval and audit timeline before export.</li>
-            </ul>
-          </article>
-        </div>
-        <div class="cta center pediatric-cta">
-          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">See pediatric workflow live</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="arztbrief-features" class="section alt-bg">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">📋</span>German Medical Letter Standard</h2>
-        <p class="sub">12-section structure, approval workflow, pediatric support — fully integrated.</p>
-        <div class="grid3">
-          <div class="card reveal">
-            <h3>Letter Status Workflow</h3>
-            <ul class="feature-list">
-              <li>Provisional draft (Resident)</li>
-              <li>Provisional approved (Attending review)</li>
-              <li>Final approved (Oberarzt signature)</li>
-              <li>Transfer letter (ward → ward)</li>
-              <li>Archived with complete history</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Pediatric vs Adult</h3>
-            <ul class="feature-list">
-              <li>Automatic template detection by age</li>
-              <li>Pediatric intake (percentiles, vaccination status)</li>
-              <li>Guardrails against incomplete pediatric letters</li>
-              <li>Age-appropriate phrasing in drafts</li>
-              <li>Growth notes and developmental status</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Role Approval & Audit</h3>
-            <ul class="feature-list">
-              <li>Resident → Attending → Oberarzt</li>
-              <li>Changes logged at every step</li>
-              <li>Who changed what and when</li>
-              <li>AI suggestions with accept/reject tracking</li>
-              <li>Export only after final approval</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="founder-story" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Founder Story</h2>
-        <div class="card story-card">
-          <p>
-            BriefPro started from a very human pattern I kept seeing around me: doctor friends finishing 16–24 hour shifts,
-            then spending another 3–5 hours writing documentation. Not because they lacked discipline, but because the workload
-            left no better option.
-          </p>
-          <p>
-            I did not want to build “just another AI tool.” I wanted to build time back into clinical life.
-            BriefPro is designed for daily reality: record, structure, review, approve and export — with explicit responsibility
-            and no silent autopilot changes.
-          </p>
-          <p>
-            BriefPro is now a production‑ready platform for creating, managing, and approving German medical letters.
-            It combines modern AI assistance with medical process logic, validation rules, and a compliant approval workflow —
-            developed with real clinical input.
-          </p>
-          <p>
-            Our mission is straightforward: help clinicians in Germany reclaim time for patients without sacrificing quality,
-            review discipline, or traceability.
-          </p>
-        </div>
-        <div class="grid3 roadmap-grid">
-          <div class="card">
-            <h3>Already live</h3>
-            <p>Voice-to-transcript, structured 12-section draft, explicit review/approval, and export in one practical workflow.</p>
-          </div>
-          <div class="card">
-            <h3>Next focus</h3>
-            <p>Stronger team workflows, richer approval stages, and tighter integration into existing clinic and practice operations.</p>
-          </div>
-          <div class="card">
-            <h3>Trust roadmap</h3>
-            <p>Transparent compliance path for Germany and the EU, including an expandable security and governance framework.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="section alt-bg">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">👥</span>Team</h2>
-        <div class="team-grid">
-          <article class="card team-card reveal">
-            <picture>
-              <source srcset="/assets/team-angel-castro-martinez.webp" type="image/webp" />
-              <img
-                class="team-photo"
-                src="/assets/team-angel-castro-martinez.jpeg"
-                alt="Angel Castro Martinez"
-                loading="lazy"
-                width="120"
-                height="120"
-              />
-            </picture>
-            <div>
-              <h3>Dr. Angel Mario Castro Martinez</h3>
-              <p class="team-role">Founder & Product Engineer</p>
-              <p class="muted">
-                Lead Machine‑Learning Architect & PhD (Neurosensory Science). 10+ years building scalable speech + AI systems.
-                Previous roles include Deutsche Telekom IT and Amazon. Academic background in hearing tech & audiology (University of Oldenburg).
-              </p>
-              <p class="muted">📍 Berlin, Germany</p>
-              <p class="muted">“If we can cut documentation time in half, clinicians can finally get meaningful time back for patient care.”</p>
-              <p>
-                <a
-                  class="text-link"
-                  href="https://www.linkedin.com/in/angelcastrom"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >LinkedIn profile</a>
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="safety" class="section">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">🛡️</span>Trust & Compliance</h2>
-        <div class="grid3">
-          <div class="card">
-            <h3>GDPR-compliant</h3>
-            <p>Data minimization, DPA/DPIA documentation, hosted in Germany. Audio is not stored long-term by default.</p>
-          </div>
-          <div class="card">
-            <h3>Audit trail</h3>
-            <p>Every change is traceable: who changed what, when, and who approved it. Mandatory review with approval gates.</p>
-          </div>
-          <div class="card">
-            <h3>Role-based approvals</h3>
-            <p>Clear status chain: draft → resident approval → attending approval → export. No bypassing possible.</p>
-          </div>
-        </div>
-        <div class="card" id="compliance-roadmap">
-          <h3>Integration & compliance roadmap</h3>
-          <p>Cobra CRM first, hospitals via HL7 v2 / FHIR. Certification path (ISO 27001, ISO 13485, EU MDR) as a transparent roadmap — no claims, only verifiable steps.</p>
-          <p class="note">BriefPro supports documentation and does not replace clinical decision-making. Detailed compliance materials are available upon request for procurement conversations.</p>
-        </div>
-        <div class="cta center">
-          <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book Live Demo</a>
-          <a class="btn secondary" data-cta="primary" href="mailto:pilot@briefpro.de?subject=BriefPro%20Compliance%20Info">Request compliance materials</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Pricing (pilot)</h2>
-        <div class="grid3">
-          <div class="card reveal">
-            <h3>Single practice</h3>
-            <p>Pilot for 1–3 clinicians</p>
-            <ul class="feature-list">
-              <li>Voice-first Ambient Dictation</li>
-              <li>12-section medical letter structure</li>
-              <li>Chat-based review</li>
-              <li>PDF & Word export</li>
-              <li>Basic audit trail</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Clinic team</h3>
-            <p>Pilot for teams</p>
-            <ul class="feature-list">
-              <li>All Single practice features</li>
-              <li>Multi-user roles (Resident, Attending)</li>
-              <li>Approval lanes & status flow</li>
-              <li>Extended audit trail</li>
-              <li>Integration plan (KIS/export)</li>
-            </ul>
-          </div>
-          <div class="card reveal">
-            <h3>Enterprise</h3>
-            <p>Multiple sites & full integration</p>
-            <ul class="feature-list">
-              <li>All Clinic team features</li>
-              <li>SSO & IAM integration</li>
-              <li>EU data residency (On-Premise)</li>
-              <li>DPA/DPIA setup</li>
-              <li>KIS connector plan (ORBIS, SAP, IS-H)</li>
-            </ul>
-          </div>
-        </div>
-        <p class="note">Pilot pricing is finalized case-by-case based on requirements.</p>
-      </div>
-    </section>
-
-    <section id="resources" class="section alt-bg">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">📚</span>Resources</h2>
-        <div class="grid3">
-          <div class="card">
-            <h3>Demo stories</h3>
-            <p>Concrete storylines for sales and live demos across adult, pediatric, and procurement/IT perspectives.</p>
-          </div>
-          <div class="card">
-            <h3>Safety & compliance</h3>
-            <p>Privacy, audit trail, role-based approval flow, and certification path in one concise procurement-ready summary.</p>
-          </div>
-          <div class="card">
-            <h3>Pilot pack</h3>
-            <p>One-pager, pilot checklist, and first-call materials for clinic leadership, security, and medical teams.</p>
-          </div>
-        </div>
-        <div class="cta center">
-          <a class="btn ghost" href="#stories">Open demo stories</a>
-          <a class="btn ghost" href="#safety">Open safety & compliance</a>
-          <a class="btn secondary" data-cta="secondary" href="mailto:pilot@briefpro.de?subject=BriefPro%20resources%20request">Request resources</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="stories" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Demo stories with concrete flow</h2>
-        <div class="grid3">
-          <div class="card">
-            <h3>Story 1 · Adult case (3 min)</h3>
-            <p><strong>Starting point:</strong> Chest pain consult, known hypertension, negative acute markers.</p>
-            <p><strong>In BriefPro:</strong> Input -> 12-section draft -> focused correction -> role approval.</p>
-            <p><strong>Value shown:</strong> Less rework and explicit accountability in the review path.</p>
-          </div>
-          <div class="card">
-            <h3>Story 2 · Pediatric case (5 min)</h3>
-            <p><strong>Starting point:</strong> Child with fever/cough, percentile and vaccination context required.</p>
-            <p><strong>In BriefPro:</strong> Validated pediatric intake, pediatric-safe drafting, missing data flags <code>[?]</code>, auditable approval.</p>
-            <p><strong>Value shown:</strong> Complex clinical structure remains clear and reproducible for teams.</p>
-          </div>
-          <div class="card">
-            <h3>Story 3 · Procurement / IT view</h3>
-            <p><strong>Starting point:</strong> Questions on risk, responsibility, and integration effort.</p>
-            <p><strong>In BriefPro:</strong> Review-first workflow, approval gates, audit trail, export-first integration path.</p>
-            <p><strong>Value shown:</strong> Pilot can start fast without immediate deep system write-back.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="trust" class="section">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">📊</span>Trust & Metrics</h2>
-        <div class="kpi-grid reveal">
-          <div class="kpi-item">
-            <div class="kpi-value">GDPR compliant</div>
-            <div class="kpi-label">EU data residency, audit trail</div>
-          </div>
-          <div class="kpi-item">
-            <div class="kpi-value">12 sections</div>
-            <div class="kpi-label">German medical letter standard</div>
-          </div>
-          <div class="kpi-item">
-            <div class="kpi-value">Review-first</div>
-            <div class="kpi-label">Clinical responsibility stays with physician</div>
-          </div>
-        </div>
-        <div class="trust-badges reveal">
-          <div class="trust-badge">
-            <span class="trust-badge-icon">🔒</span>
-            <span>EU-GDPR compliant</span>
-          </div>
-          <div class="trust-badge">
-            <span class="trust-badge-icon">✓</span>
-            <span>Medical validation</span>
-          </div>
-          <div class="trust-badge">
-            <span class="trust-badge-icon">🏥</span>
-            <span>Clinic-tested</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section alt-bg">
-      <div class="container">
-        <h2 class="section-title reveal"><span class="section-icon" aria-hidden="true">❓</span>FAQ</h2>
-        <div class="grid3">
-          <div class="card">
-            <h3>Does BriefPro replace clinical decisions?</h3>
-            <p>No. BriefPro supports medical-letter documentation and does not provide autonomous diagnostic or treatment decisions. Clinical responsibility and final approval always stay with the care team.</p>
-          </div>
-          <div class="card">
-            <h3>Does BriefPro write back to other systems automatically?</h3>
-            <p>No, not autonomously. Exports and integration actions are explicitly user-triggered and remain part of the review workflow.</p>
-          </div>
-          <div class="card">
-            <h3>How quickly can a pilot start?</h3>
-            <p>Usually within days, depending on setup and integration scope. We can start without deep system integration.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="panel">
-          <h2 class="panel-title">Pilot or demo</h2>
-          <p class="muted panel-subtitle">Tell us your setup (Cobra / hospital system) and your output requirements.</p>
-          <div class="cta">
-            <a class="btn primary" data-cta="booking" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener">Book live demo</a>
-            <a class="btn ghost" data-cta="secondary" href="mailto:pilot@briefpro.de?subject=BriefPro%20pilot%20request">Questions by email</a>
-          </div>
-          <p class="note">For existing users: <a class="text-link" href="https://app.briefpro.de" rel="noopener">app.briefpro.de</a></p>
-          <p class="note">Imprint & privacy pages will be finalized once legal/company details are confirmed.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div id="proof-lightbox" class="proof-lightbox" hidden>
-    <button type="button" class="proof-lightbox-close" aria-label="Close fullscreen image">Close</button>
-    <img id="proof-lightbox-image" alt="" />
   </div>
+</header>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-meta">
-        <div class="muted">© <span id="y"></span> BriefPro</div>
+<main id="top">
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        For resident and attending physicians in German clinics
       </div>
-      <div class="legal">
-        <a href="/impressum.html">Imprint</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="https://app.briefpro.de" rel="noopener">App</a>
+      <h1 class="display" id="hero-headline">
+        From dictation to approved<br />
+        <span class="display-accent">medical letters.</span> In minutes.
+      </h1>
+      <p class="lede" id="hero-sub">
+        BriefPro is the only medical letter assistant with real role-based approvals.
+        Speak as usual — we deliver the 12‑section draft,
+        you retain medical responsibility.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="hero-primary">
+          Book 30‑Min Clinic Demo
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#walkthrough">
+          View Workflow
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 1.5 3 4v4.5c0 3 2 5 5 6 3-1 5-3 5-6V4L8 1.5z" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+          GDPR &amp; EU‑Hosting
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Audit‑Trail per Section
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="6" r="2.5" stroke="currentColor" stroke-width="1.4" fill="none"/><path d="M3 13c1-2.5 3-3.5 5-3.5s4 1 5 3.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+          Review‑Required, No Autopilot
+        </div>
       </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('y').textContent = String(new Date().getFullYear());
-    const track = (eventName) => {
-      if (typeof window.plausible === 'function') {
-        window.plausible(eventName);
+    <aside class="hero-visual" aria-label="BriefPro Workflow">
+      <div class="device" id="hero-device">
+        <div class="device-bar">
+          <div class="device-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="device-tabs">
+            <span class="device-tab is-active">Recording</span>
+            <span class="device-tab">Entwurf</span>
+            <span class="device-tab">Freigabe</span>
+          </div>
+          <div class="device-status"><span class="status-pulse"></span>app.briefpro.de</div>
+        </div>
+        <div class="device-stage" id="device-stage">
+          <!-- Stage 1: recording -->
+          <div class="stage stage-record" data-stage="0">
+            <div class="record-row">
+              <div class="record-meta">
+                <div class="record-patient">
+                  <span class="record-label">Patient</span>
+                  <strong>Max Mustermann · 67J</strong>
+                </div>
+                <div class="record-encounter">
+                  <span class="record-label">Encounter</span>
+                  <strong>Vorläufige Entlassung · Kardiologie</strong>
+                </div>
+              </div>
+              <div class="record-timer"><span class="record-dot"></span>02:34</div>
+            </div>
+            <div class="wave" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="transcript-strip">
+              <span class="ts-line">„… retrosternale Schmerzen seit zwei Stunden, Ausstrahlung in den linken Arm…"</span>
+            </div>
+            <div class="record-progress">
+              <span>3 von 12 Sektionen erfasst</span>
+              <div class="progress-track"><div class="progress-fill" style="--p:25%"></div></div>
+            </div>
+          </div>
+
+          <!-- Stage 2: draft -->
+          <div class="stage stage-draft" data-stage="1">
+            <div class="draft-section">
+              <div class="draft-section-head">
+                <span class="draft-num">04</span>
+                <span class="draft-title">Anamnese</span>
+                <span class="draft-pill draft-pill-new">KI‑Vorschlag</span>
+              </div>
+              <p class="draft-text">
+                Der Patient stellte sich mit seit zwei Stunden bestehenden
+                <mark class="hl-add">retrosternalen Schmerzen mit Ausstrahlung in den linken Arm</mark>
+                vor. Vorerkrankungen: arterielle Hypertonie, bekannte KHK.
+              </p>
+            </div>
+            <div class="diff-card">
+              <div class="diff-old">– Schmerzen seit 2h, keine Ausstrahlung</div>
+              <div class="diff-new">+ Schmerzen seit 2h, Ausstrahlung in den linken Arm</div>
+              <div class="diff-actions">
+                <span class="chip chip-accept">Akzeptieren</span>
+                <span class="chip chip-reject">Ablehnen</span>
+              </div>
+            </div>
+            <div class="draft-section draft-section-muted">
+              <div class="draft-section-head">
+                <span class="draft-num">07</span>
+                <span class="draft-title">Verlauf</span>
+                <span class="draft-pill">Vorschlag in Arbeit</span>
+              </div>
+              <div class="skeleton-line"></div>
+              <div class="skeleton-line w70"></div>
+            </div>
+          </div>
+
+          <!-- Stage 3: approval -->
+          <div class="stage stage-approve" data-stage="2">
+            <div class="approve-status">
+              <div class="approve-status-row">
+                <span class="approve-step is-done">
+                  <span class="step-dot"></span> Entwurf
+                </span>
+                <span class="approve-line is-done"></span>
+                <span class="approve-step is-done">
+                  <span class="step-dot"></span> Assistenzarzt
+                </span>
+                <span class="approve-line is-active"></span>
+                <span class="approve-step is-active">
+                  <span class="step-dot"></span> Oberarzt
+                </span>
+                <span class="approve-line"></span>
+                <span class="approve-step">
+                  <span class="step-dot"></span> Final
+                </span>
+              </div>
+            </div>
+            <div class="validation-card">
+              <div class="validation-icon">
+                <svg viewBox="0 0 16 16" width="12" height="12"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="validation-body">
+                <strong>Medizinische Validierung bestanden</strong>
+                <span>Keine kritischen Wechselwirkungen, Allergien dokumentiert.</span>
+              </div>
+            </div>
+            <div class="audit-list">
+              <div class="audit-row"><span class="audit-time">14:02</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">Anamnese geändert</span></div>
+              <div class="audit-row"><span class="audit-time">14:08</span><span class="audit-actor">Dr. A. Schmidt</span><span class="audit-act">zur Freigabe gestellt</span></div>
+              <div class="audit-row audit-pending"><span class="audit-time">·</span><span class="audit-actor">Prof. Dr. K. Weber</span><span class="audit-act">Oberarzt-Freigabe ausstehend</span></div>
+            </div>
+            <div class="export-row">
+              <span class="export-btn">PDF exportieren</span>
+              <span class="export-btn export-btn-ghost">Kopieren</span>
+              <span class="export-btn export-btn-ghost">HL7 Senden</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stage-nav" role="tablist" aria-label="Workflow-Schritt">
+        <button type="button" class="stage-nav-btn is-active" data-stage="0" role="tab"><span class="stage-nav-num">01</span> Aufnehmen</button>
+        <button type="button" class="stage-nav-btn" data-stage="1" role="tab"><span class="stage-nav-num">02</span> Entwerfen</button>
+        <button type="button" class="stage-nav-btn" data-stage="2" role="tab"><span class="stage-nav-num">03</span> Freigeben</button>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============== PROBLEM ============== -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <p class="problem-eyebrow">Das Problem</p>
+      <p class="problem-statement">
+        Eine 24‑Stunden‑Schicht endet selten um 24 Uhr.
+        Nach Visiten, Notfällen und OPs warten noch
+        <span class="problem-highlight">3 bis 5 Stunden Arztbriefe</span> —
+        oft am Wochenende, oft unbezahlt, immer ohne klare Verantwortungsübergabe.
+      </p>
+      <div class="problem-stats">
+        <div class="problem-stat">
+          <div class="stat-num"><span class="stat-num-value" data-count="3">3</span><span class="stat-num-unit">h+</span></div>
+          <div class="stat-label">tägliche Doku-Last nach der Schicht</div>
+        </div>
+        <div class="problem-stat">
+          <div class="stat-num"><span class="stat-num-value" data-count="60">60</span><span class="stat-num-unit">%</span></div>
+          <div class="stat-label">der Ärzte berichten Burnout-Symptome</div>
+        </div>
+        <div class="problem-stat">
+          <div class="stat-num"><span class="stat-num-value" data-count="0">0</span></div>
+          <div class="stat-label">generischer Ambient-Scribes mit echtem DE-Brief-Workflow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WALKTHROUGH ============== -->
+<section class="walkthrough" id="walkthrough">
+  <div class="container">
+    <div id="paediatrie-proof" style="display:none"></div>
+    <div id="pediatric-proof" style="display:none"></div>
+    <div class="section-head">
+      <p class="section-eyebrow">So funktioniert es</p>
+      <h2 class="section-title">Drei Schritte. Eine Verantwortungskette.</h2>
+      <p class="section-sub">Kein Autopilot. Kein Black‑Box‑Output. Jeder Übergang ist sichtbar, jede Änderung nachvollziehbar.</p>
+    </div>
+    <div class="walk-grid">
+      <article class="walk-card">
+        <span class="walk-num">01</span>
+        <h3 class="walk-title">Aufnehmen</h3>
+        <p class="walk-text">Sprechen Sie wie im Stationsalltag. BriefPro transkribiert auf Deutsch, optional mit Speaker‑Trennung. Audio wird nach der Transkription verworfen.</p>
+        <ul class="walk-list">
+          <li>Voice‑first, ohne Vorlagen lernen</li>
+          <li>Patient + Encounter‑Kontext</li>
+          <li>Audio nicht persistent</li>
+        </ul>
+      </article>
+      <article class="walk-card walk-card-mid">
+        <span class="walk-num">02</span>
+        <h3 class="walk-title">Entwerfen</h3>
+        <p class="walk-text">12‑Sektionen‑Standard mit dynamischen Templates. KI schlägt vor, markiert fehlende Daten als <code class="inline-code">[?]</code> statt zu erfinden.</p>
+        <ul class="walk-list">
+          <li>Pädiatrie / Erwachsenen automatisch</li>
+          <li>Diff‑basiertes Review pro Abschnitt</li>
+          <li>Akzeptieren · Ablehnen · Bearbeiten</li>
+        </ul>
+      </article>
+      <article class="walk-card">
+        <span class="walk-num">03</span>
+        <h3 class="walk-title">Freigeben</h3>
+        <p class="walk-text">Statusfluss Assistenzarzt → Oberarzt → Final. Nur freigegebene Inhalte verlassen den Workflow. Vollständiger Audit‑Trail.</p>
+        <ul class="walk-list">
+          <li>Rollenbasierte Approval‑Gates</li>
+          <li>Wer · was · wann pro Sektion</li>
+          <li>Export PDF / HL7 / Copy</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EDITORIAL QUOTE ============== -->
+<section class="editorial">
+  <div class="container">
+    <blockquote class="editorial-quote">
+      <p>
+        „Wir wollten kein weiteres Diktiergerät und keinen Autopiloten,
+        der heimlich Diagnosen umschreibt. Wir wollten ein Werkzeug, das
+        <span class="editorial-emph">die Verantwortungskette unserer Klinik abbildet</span> —
+        Assistenzarzt, Oberarzt, Freigabe. Genau das macht BriefPro."
+      </p>
+      <footer class="editorial-meta">
+        <span class="editorial-line"></span>
+        <span>Klinische Leitidee · Dr. A. Castro Martinez, Gründer</span>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============== DIFFERENTIATION ============== -->
+<section class="diff" id="unterschied">
+  <div class="container">
+    <div id="warum-briefpro" style="display:none"></div>
+    <div id="why-briefpro" style="display:none"></div>
+    <div class="section-head">
+      <p class="section-eyebrow">Warum BriefPro</p>
+      <h2 class="section-title">Generische Ambient‑Scribes hören zu.<br /><span class="section-title-emph">BriefPro übergibt Verantwortung.</span></h2>
+    </div>
+    <div class="compare">
+      <div class="compare-col compare-col-other">
+        <div class="compare-head">
+          <span class="compare-label">Generischer AI‑Scribe</span>
+        </div>
+        <ul class="compare-list">
+          <li><span class="compare-x" aria-hidden="true">×</span> Gesprächsnotiz statt strukturiertem Brief</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Eine Person, ein Output — keine Rollentrennung</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Audit nur auf Session‑Ebene</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> US‑Fokus, deutsche Brief‑Struktur ist Beiwerk</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Erfindet fehlende Details (Halluzination)</li>
+          <li><span class="compare-x" aria-hidden="true">×</span> Tiefe EHR‑Integration als Eintrittsbarriere</li>
+        </ul>
+      </div>
+      <div class="compare-col compare-col-us">
+        <div class="compare-head">
+          <span class="compare-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="compare-label">BriefPro</span>
+        </div>
+        <ul class="compare-list">
+          <li><span class="compare-check" aria-hidden="true">✓</span> 12‑Sektionen Standard mit pädiatrischen Templates</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Assistenzarzt → Oberarzt → Final als Pflichtfluss</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Sektionsbezogener Audit‑Trail (wer, was, wann)</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> In Berlin gebaut, für deutsche Klinikrealität</li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Fehlende Daten transparent als <code class="inline-code">[?]</code></li>
+          <li><span class="compare-check" aria-hidden="true">✓</span> Export‑first: Pilot ohne EHR‑Eingriff startbar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRODUCT (animated detail) ============== -->
+<section class="product" id="produkt">
+  <div class="container">
+    <div id="freigabe-lanes" style="display:none"></div>
+    <div id="approval-lanes" style="display:none"></div>
+    <div class="section-head">
+      <p class="section-eyebrow">Im Brief</p>
+      <h2 class="section-title">Was die Rollenfreigabe wirklich bedeutet.</h2>
+      <p class="section-sub">Drei Lanes, ein klarer Statusfluss, keine Umgehung. So sieht klinische Verantwortung in Software aus.</p>
+    </div>
+    <div class="lanes">
+      <div class="lane">
+        <div class="lane-head">
+          <span class="lane-num">Lane 1</span>
+          <h3>Assistenzarzt</h3>
+        </div>
+        <p class="lane-text">Erstellt den Erstentwurf, ergänzt klinische Details aus der Visite, übergibt zur Fachfreigabe.</p>
+        <div class="lane-status lane-status-draft">
+          <span class="lane-status-dot"></span>
+          <span>Entwurf · 8 von 12 Sektionen</span>
+        </div>
+      </div>
+      <div class="lane lane-mid">
+        <div class="lane-head">
+          <span class="lane-num">Lane 2</span>
+          <h3>Facharzt</h3>
+        </div>
+        <p class="lane-text">Prüft Vollständigkeit, Konsistenz und medizinische Sicherheit. Akzeptiert oder fordert Korrektur.</p>
+        <div class="lane-status lane-status-review">
+          <span class="lane-status-dot"></span>
+          <span>In Review · 2 Hinweise</span>
+        </div>
+      </div>
+      <div class="lane">
+        <div class="lane-head">
+          <span class="lane-num">Lane 3</span>
+          <h3>Oberarzt &amp; Final</h3>
+        </div>
+        <p class="lane-text">Finale Signatur. Nur freigegebene Inhalte verlassen den Workflow — Export mit dokumentierter Historie.</p>
+        <div class="lane-status lane-status-final">
+          <span class="lane-status-dot"></span>
+          <span>Bereit zum Export</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TRUST ============== -->
+<section class="trust" id="sicherheit">
+  <div class="container">
+    <div id="compliance-roadmap" style="display:none"></div>
+    <div class="section-head">
+      <p class="section-eyebrow">Sicherheit &amp; Compliance</p>
+      <h2 class="section-title">Für deutsches Procurement, IT und Datenschutz gebaut.</h2>
+    </div>
+    <div class="trust-grid">
+      <article class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 32 32" width="22" height="22"><path d="M16 4 6 8v8c0 6 4 10 10 12 6-2 10-6 10-12V8L16 4z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/><path d="M11 16l3.5 3.5L21 13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>DSGVO &amp; EU‑Hosting</h3>
+        <p>Datensparsamkeit, Datenschutzunterlagen, Hosting in Deutschland. Audio nicht persistent.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 32 32" width="22" height="22"><rect x="6" y="8" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11 14h10M11 18h10M11 22h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="22" cy="8" r="3" fill="currentColor"/></svg>
+        </div>
+        <h3>Audit‑Trail pro Sektion</h3>
+        <p>Jede Änderung mit Akteur, Zeit und Diff. Approval‑Gates lassen sich nicht umgehen.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 32 32" width="22" height="22"><circle cx="11" cy="13" r="3.5" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="21" cy="13" r="3.5" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M5 26c1-4 3.5-5.5 6-5.5s5 1.5 6 5.5M15 26c1-4 3.5-5.5 6-5.5s5 1.5 6 5.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Rollenbasierte Freigabe</h3>
+        <p>Assistenzarzt → Oberarzt → Final. Keine stille KI‑Änderung, keine Schatten‑Freigabe.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 32 32" width="22" height="22"><path d="M6 16h6l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Export‑first Integration</h3>
+        <p>Pilot ohne KIS‑Eingriff. Spätere HL7 v2 / FHIR / ORBIS / SAP IS‑H als Stufenplan.</p>
+      </article>
+    </div>
+    <div class="cert-strip">
+      <div class="cert-strip-head">Zertifizierungs‑Roadmap</div>
+      <div class="cert-strip-grid">
+        <div class="cert"><span class="cert-status cert-status-progress">In Arbeit</span><span class="cert-name">DSGVO‑Konformität</span></div>
+        <div class="cert"><span class="cert-status cert-status-progress">In Arbeit</span><span class="cert-name">ISO 27001</span></div>
+        <div class="cert"><span class="cert-status cert-status-roadmap">Roadmap</span><span class="cert-name">ISO 13485</span></div>
+        <div class="cert"><span class="cert-status cert-status-roadmap">Roadmap</span><span class="cert-name">EU MDR</span></div>
+      </div>
+      <p class="cert-note">Wir machen keine Zertifizierungs‑Versprechen — nur überprüfbare Schritte. Detaillierte Compliance‑Unterlagen im Procurement‑Gespräch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOUNDER ============== -->
+<section class="founder" id="gruendungsstory">
+  <div class="container founder-grid">
+    <div id="team" style="display:none"></div>
+    <div id="founder-story" style="display:none"></div>
+    <div class="founder-portrait" aria-hidden="true">
+      <div class="founder-portrait-frame">
+        <div class="founder-portrait-shape"></div>
+        <span class="founder-portrait-label">Dr. Angel Mario Castro Martinez</span>
+      </div>
+    </div>
+    <div class="founder-copy">
+      <p class="section-eyebrow">Gründer</p>
+      <h2 class="founder-name"><span class="serif-emph">Dr. Angel Mario</span> Castro Martinez</h2>
+      <p class="founder-role">Founder &amp; Product Engineer · Berlin</p>
+      <p class="founder-text">
+        PhD in Neurosensory Science (Universität Oldenburg). Über zehn Jahre in skalierbaren
+        Sprach‑ und KI‑Systemen — vorher Deutsche Telekom IT, Amazon. BriefPro entstand
+        aus der Beobachtung, dass Ärzte in seinem Umfeld nach 24‑Stunden‑Schichten
+        noch stundenlang dokumentierten.
+      </p>
+      <p class="founder-quote">
+        „Wenn wir die Doku‑Zeit halbieren, entsteht wieder Raum für echte Patientenversorgung.
+        Aber nicht durch mehr KI — durch bessere Verantwortungsübergaben."
+      </p>
+      <a class="text-link" href="https://www.linkedin.com/in/angelcastrom" target="_blank" rel="noopener noreferrer">
+        LinkedIn ansehen
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING / PILOT ============== -->
+<section class="pilot" id="preise">
+  <div class="container">
+    <div class="section-head">
+      <p class="section-eyebrow">Pilot</p>
+      <h2 class="section-title">Ein Pilot. Klare Schritte. Keine Lizenz‑Akrobatik.</h2>
+      <p class="section-sub">Pilotpreise werden nach Setup und Anforderung individuell finalisiert. Hier ist, wie wir typischerweise starten.</p>
+    </div>
+    <div class="pilot-grid">
+      <div class="pilot-step">
+        <div class="pilot-step-num">01</div>
+        <h3>Discovery · 30 Min</h3>
+        <p>Workflow, Volumen, Datenschutz‑Anforderungen. Wir bringen den Pilot‑Pack für IT &amp; Einkauf mit.</p>
+      </div>
+      <div class="pilot-step">
+        <div class="pilot-step-num">02</div>
+        <h3>Setup · 2–5 Tage</h3>
+        <p>Klinik‑Account, Rollenmodell (Assistenz‑/Oberarzt), Testpatienten. Kein KIS‑Eingriff nötig.</p>
+      </div>
+      <div class="pilot-step">
+        <div class="pilot-step-num">03</div>
+        <h3>Pilot · 4–8 Wochen</h3>
+        <p>Eine Abteilung, klare Erfolgskriterien (Doku‑Zeit, Freigabe‑Latenz). Audit‑Daten gehören Ihnen.</p>
+      </div>
+      <div class="pilot-step pilot-step-cta">
+        <h3>Bereit?</h3>
+        <p>Wir blocken eine Stunde, Sie bringen einen typischen Brief. Wir zeigen den vollen Workflow live — kein generisches Demo‑Deck.</p>
+        <a class="btn btn-primary" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="pilot-card">
+          Klinik‑Demo buchen
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="faq" id="faq">
+  <div class="container faq-grid">
+    <div class="faq-head">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-title">Was Procurement, IT und Fachärzte fragen.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Ersetzt BriefPro ärztliche Entscheidungen?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Nein. BriefPro ist Dokumentationsunterstützung. Es trifft keine autonomen Diagnose‑ oder Therapieentscheidungen. Medizinische Verantwortung und finale Freigabe bleiben immer beim klinischen Team.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Schreibt BriefPro automatisch in andere Systeme zurück?<span class="faq-icon" aria-hidden="true"></span></summary>
+        <p>Nein, nicht autonom. Exporte werden explizit ausgelöst. Pilote starten typischerweise export‑first; HL7 / FHIR / KIS‑Connectoren folgen stufenweise.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Wie schnell ist ein Pilot startbar?</summary>
+        <p>Typisch innerhalb weniger Tage, ohne tiefe KIS‑Integration. Eine Abteilung, klare Erfolgskriterien, 4–8 Wochen Laufzeit.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Welche Daten verlassen das System?</summary>
+        <p>Audio wird nach Transkription verworfen (Standard). Transkripte und Briefe verschlüsselt in der EU. Keine Weitergabe an Dritte ohne explizite Zustimmung.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Pädiatrie‑Unterstützung?</summary>
+        <p>Ja. Pädiatrischer Intake mit Pflichtfeldern (Perzentile, Impfstatus), altersgerechte Templates, Guardrails gegen unvollständige Briefe.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Was kostet der Pilot?</summary>
+        <p>Pilotpreise werden individuell nach Klinikgröße, Abteilungsumfang und Integrationsbedarf finalisiert. Erwartet keine Versteckspielchen — wir sind transparent im Discovery‑Gespräch.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============== FINAL CTA ============== -->
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <div class="final-cta-copy">
+      <h2 class="final-cta-title">Geben Sie Ihren Ärzten den Abend zurück.</h2>
+      <p class="final-cta-sub">30 Minuten. Ein typischer Brief. Wir zeigen Ihnen den vollen Workflow live — vom Diktat bis zur Oberarzt‑Freigabe.</p>
+    </div>
+    <div class="final-cta-actions">
+      <a class="btn btn-primary btn-lg" href="https://calendar.app.google/M5LMF2EJpVn5vUGYA" rel="noopener" data-cta="final-primary">30‑Min Klinik‑Demo buchen</a>
+      <a class="btn btn-ghost btn-lg" href="mailto:pilot@briefpro.de?subject=BriefPro%20Pilot%20anfragen" data-cta="final-secondary">pilot@briefpro.de</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="#top" aria-label="BriefPro">
+        <img src="/assets/logo.svg" alt="BriefPro Logo" width="34" height="34" class="brand-mark-img" />
+        <span class="brand-word">BriefPro</span>
+      </a>
+      <p class="footer-tag" data-i18n="footer.tag">Vom Diktat zum freigegebenen Arztbrief.<br/>Berlin, Deutschland.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <span class="footer-col-head">Produkt</span>
+        <a href="#walkthrough">Workflow</a>
+        <a href="#unterschied">Warum BriefPro</a>
+        <a href="#preise">Pilot</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Sicherheit</span>
+        <a href="#sicherheit">Compliance</a>
+        <a href="#sicherheit">Audit-Trail</a>
+        <a href="#sicherheit">Roadmap</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Kontakt</span>
+        <a href="mailto:pilot@briefpro.de">pilot@briefpro.de</a>
+        <a href="https://app.briefpro.de" rel="noopener">App Login</a>
+        <a href="https://www.linkedin.com/in/angelcastrom" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-col-head">Rechtliches</span>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/privacy.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+  <div class="container site-footer-bottom">
+    <span>© <span id="y"></span> BriefPro</span>
+    <span class="footer-lang"><a aria-current="page">DE</a> · <a href="/en/">EN</a></span>
+  </div>
+</footer>
+
+<div id="tweaks-root"></div>
+
+<script>
+  // Year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Hero stage cycling
+  (function(){
+    const stage = document.getElementById('device-stage');
+    const buttons = Array.from(document.querySelectorAll('.stage-nav-btn'));
+    let active = 0;
+    let timer = null;
+    let userInteracted = false;
+
+    function setStage(i, fromUser) {
+      active = (i + 3) % 3;
+      if (stage) stage.dataset.active = active;
+      buttons.forEach((b, idx) => b.classList.toggle('is-active', idx === active));
+      const tabs = document.querySelectorAll('.device-tab');
+      tabs.forEach((t, idx) => t.classList.toggle('is-active', idx === active));
+      if (fromUser) {
+        userInteracted = true;
+        if (timer) { clearInterval(timer); timer = null; }
       }
-    };
-    document.querySelectorAll('[data-cta="primary"]').forEach((el) => {
-      el.addEventListener('click', () => track('CTA_Pilot'));
-    });
-    document.querySelectorAll('[data-cta="secondary"]').forEach((el) => {
-      el.addEventListener('click', () => track('CTA_Secondary'));
-    });
-    document.querySelectorAll('[data-cta="booking"]').forEach((el) => {
-      el.addEventListener('click', () => track('CTA_Booking'));
-    });
+    }
 
-    const mockSteps = [
-      {
-        title: 'Create Letter \u2013 3-Panel Workflow',
-        copy: 'Chat, AI suggestions, and section overview in one workspace.',
-        body: '<div class="mock-3panel"><div class="mock-chat-panel"><div class="mock-chat-panel-title">Chat History</div><div class="mock-chat-bubble" style="font-size:11px;padding:8px 10px">Hello! Please enter the patient information. I will analyse which sections I can fill in.</div><div class="mock-chat-bubble" style="font-size:11px;padding:8px 10px;border-radius:12px 12px 4px 12px;background:rgba(2,132,199,.12)">Doctor: Patient has had headaches for 5 days.</div><div class="mock-progress"><span>PROGRESS</span><div class="mock-progress-bar"><div class="mock-progress-fill" style="width:0%"></div></div><span>0/12</span></div></div><div class="mock-suggestions-panel"><div class="mock-suggestions-title">AI Suggestions \u00b7 3 suggestions</div><div class="mock-suggestion-card"><div class="mock-suggestion-header"><span class="mock-suggestion-name">Introduction</span><span class="mock-confidence"><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span></span></div><div class="mock-suggestion-text">Dear colleague, please find attached the preliminary discharge documents for Mr Max Mustermann\u2026</div><div class="mock-action-btns"><span class="mock-btn mock-btn-accept">Accept</span><span class="mock-btn mock-btn-edit">Edit</span><span class="mock-btn mock-btn-reject">Reject</span><span class="mock-btn mock-btn-regen">Regenerate</span></div></div><div class="mock-suggestion-card"><div class="mock-suggestion-header"><span class="mock-suggestion-name">Anamnesis</span><span class="mock-confidence"><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot"></span><span class="mock-confidence-dot" style="opacity:.3"></span></span></div><div class="mock-suggestion-text">The patient presents today and reports\u2026</div></div></div><div class="mock-sections-panel"><div class="mock-sections-title">Manual Sections \u00b7 0/12</div><div class="mock-section-item"><div class="mock-section-num">1</div><div><strong>Introduction</strong><span>Letter type, patient description</span></div></div><div class="mock-section-item"><div class="mock-section-num">2</div><div><strong>Risk Factors</strong><span>List of risk factors</span></div></div><div class="mock-section-item"><div class="mock-section-num">3</div><div><strong>Diagnoses</strong><span>Primary and secondary diagnoses</span></div></div><div class="mock-section-item"><div class="mock-section-num">4</div><div><strong>Anamnesis</strong><span>Medical history, pre-existing conditions</span></div></div></div></div>'
-      },
-      {
-        title: 'Review and approve changes',
-        copy: 'Accept, reject, or correct suggestions in the chat window \u2013 section by section.',
-        body: '<div class="mock-ui-editor" id="mock-editor" style="border-right:1px solid var(--line)"><div class="mock-section"><div class="mock-section-title">4. Anamnesis</div><div>The patient presented with <span class="mock-highlight">retrosternal chest pain</span> for 2 hours.</div></div><div class="mock-change-card"><div class="mock-change-old">Retrosternal chest pain for 2h, no radiation.</div><div class="mock-change-new">Retrosternal chest pain for 2h, <b>radiating to the left arm</b>.</div><div class="mock-action-btns"><span class="mock-btn mock-btn-accept">\u2713 Accept</span><span class="mock-btn mock-btn-reject">\u2717 Reject</span></div></div><div class="mock-section" style="margin-top:12px"><div class="mock-section-title">7. Clinical Course</div><div>Under initial therapy with <span class="mock-highlight">ASA and heparin</span>, rapid symptom relief was achieved.</div><div><div class="skeleton-line long"></div></div></div></div><div class="mock-ui-assistant" id="mock-assistant"><div class="mock-chat-bubble" style="font-size:12px;padding:8px 12px">Add to anamnesis: radiation to the left arm.</div><div class="mock-chat-bubble assistant" style="font-size:12px;padding:8px 12px">I have updated the <b>anamnesis</b>. Would you like to accept the change?</div><div class="mock-action-btn">Submit for Approval</div></div>'
-      },
-      {
-        title: 'Review and Approval',
-        copy: 'Guidance, context, and handover actions stay visible inside the workspace.',
-        body: '<div class="mock-ui-editor" id="mock-editor" style="border-right:1px solid var(--line)"><div class="mock-validation"><strong>\u2713 Medical Validation OK</strong><span>No critical interactions or allergies detected.</span></div><div class="mock-section" style="margin-top:14px"><div class="mock-section-title">12. Conclusion</div><div>We kindly request further co-management.</div><div style="margin-top:16px;display:flex;gap:32px;font-weight:600;font-size:13px"><div>Dr. med. A. Schmidt<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Resident Physician</span></div><div>Prof. Dr. med. K. Weber<br><span style="font-weight:normal;color:var(--muted);font-size:12px">Senior Physician</span></div></div></div></div><div class="mock-ui-assistant" id="mock-assistant"><div class="mock-chat-bubble">Letter is ready for specialist approval.</div><div class="mock-chat-bubble assistant">Status set to <b>Provisionally Released</b>. Letter is now awaiting senior physician approval.</div><div style="display:flex;gap:8px;margin-top:4px"><div class="mock-action-btn">Export PDF</div><div class="mock-action-btn" style="background:transparent;border-color:var(--line);color:var(--fg)">Copy</div></div></div>'
-      }
-    ];
+    buttons.forEach((b, i) => b.addEventListener('click', () => setStage(i, true)));
 
-    const stageTitle = document.getElementById('proof-stage-title');
-    const stageCopy = document.getElementById('proof-stage-copy');
-    const stageStep = document.getElementById('proof-stage-step');
-    const mockBody = document.getElementById('mock-ui-body');
-    const thumbButtons = Array.from(document.querySelectorAll('[data-proof-index]'));
-    const navButtons = Array.from(document.querySelectorAll('[data-proof-nav]'));
-    let activeProofIndex = 0;
+    function startAuto() {
+      if (timer || userInteracted) return;
+      timer = setInterval(() => setStage(active + 1, false), 4200);
+    }
 
-    const renderMockStep = (index) => {
-      activeProofIndex = (index + mockSteps.length) % mockSteps.length;
-      const step = mockSteps[activeProofIndex];
-      if (!step || !mockBody) { return; }
-      mockBody.innerHTML = step.body;
-      if (stageTitle) { stageTitle.textContent = step.title; }
-      if (stageCopy) { stageCopy.textContent = step.copy; }
-      if (stageStep) { stageStep.textContent = `${activeProofIndex + 1}/${mockSteps.length}`; }
-      thumbButtons.forEach((btn) => {
-        btn.classList.toggle('is-active', Number(btn.getAttribute('data-proof-index')) === activeProofIndex);
+    setStage(0, false);
+    // Wait a beat before kicking off the cycle
+    setTimeout(startAuto, 2400);
+  })();
+
+  // Animated stat counters on scroll
+  (function(){
+    const els = document.querySelectorAll('[data-count]');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(e => e.textContent = e.dataset.count);
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const dur = 1200;
+        const start = performance.now();
+        function tick(now){
+          const t = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.round(target * eased);
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        io.unobserve(el);
       });
-    };
+    }, { threshold: 0.4 });
+    els.forEach(el => io.observe(el));
+  })();
 
-    thumbButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const i = Number(btn.getAttribute('data-proof-index'));
-        if (!Number.isNaN(i)) { renderMockStep(i); }
+  // Reveal on scroll
+  (function(){
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
       });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal, section > .container > *').forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
     });
-    navButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        renderMockStep(activeProofIndex + (btn.getAttribute('data-proof-nav') === 'prev' ? -1 : 1));
-      });
-    });
-    renderMockStep(0);
-  </script>
-  <script>
-    /* Scroll reveal — IntersectionObserver for .reveal elements */
-    (function(){
-      if(!('IntersectionObserver' in window))return;
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}})
-      },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-    })();
-  </script>
+  })();
+
+  // Sticky nav shadow
+  (function(){
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
 </body>
 </html>
