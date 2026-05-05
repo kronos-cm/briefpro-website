@@ -15,7 +15,7 @@
 Never commit the following to this repo:
 
 | Category | Examples |
-|---|---|
+| -------- | -------- |
 | Infrastructure details | Cloud provider names, region names, VPC/network config |
 | Compliance specifics | AVV drafts, TOMs, DPIA content, subprocessor lists |
 | Security architecture | Encryption details, auth implementation, penetration test results |
@@ -27,6 +27,7 @@ These belong in the **private `briefpro` repo** under `docs/`.
 ## Safe to publish
 
 General trust signals are fine on the public website:
+
 - "DSGVO-konform" ✓
 - "EU-Datenhaltung, Frankfurt" ✓  
 - "Audit-Trail" ✓
