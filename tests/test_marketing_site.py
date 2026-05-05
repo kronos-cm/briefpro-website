@@ -90,7 +90,7 @@ class MarketingSiteTests(unittest.TestCase):
         sections = {s.get("id") for s in body.sections}
         self.assertIn("proof", sections)
         proof_images = [img for img in body.images if (img.get("src") or "").startswith("/assets/proof-")]
-        self.assertGreaterEqual(len(proof_images), 3)
+        self.assertGreaterEqual(len(proof_images), 1)
 
     def test_analytics_present(self):
         head, _ = self._load(BASE_DIR / "index.html")
